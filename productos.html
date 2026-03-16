@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Productos - LAB SUPPLY</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+    <img src="img/logo labsupply.png">
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="productos.html">Productos</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="descargas.html">Descargas</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+<li>
+<a href="cotizacion.html">
+Cotización 🛒
+<span id="contadorCotizacion">0</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section>
+
+<h2>Catálogo de productos</h2>
+
+<input type="text" id="buscador" placeholder="Buscar producto">
+
+<select id="filtroCategoria">
+<option value="">Todas las categorías</option>
+<option value="Equipos e Instrumentos">Equipos e Instrumentos</option>
+<option value="Estándares y material de referencia">Estándares y material de referencia</option>
+<option value="Filtración">Filtración</option>
+<option value="Material de vidrio">Material de vidrio</option>
+<option value="Medio de cultivo">Medio de cultivo</option>
+<option value="Reactivos de laboratorio">Reactivos de laboratorio</option>
+<option value="Material de porcelana">Material de porcelana</option>
+<option value="Material de metal">Material de metal</option>
+<option value="Material de plástico">Material de plástico</option>
+</select>
+
+<div id="productos" class="gridProductos"></div>
+
+<div id="paginacion"></div>
+
+</section>
+
+<!-- ================= MODAL PRODUCTO ================= -->
+
+<div id="modalProducto" class="modal">
+
+<div class="modal-contenido">
+
+<span class="cerrar" onclick="cerrarProducto()">×</span>
+
+<div class="modal-grid">
+
+<!-- IMAGEN PRODUCTO -->
+
+<div class="modal-imagen">
+
+<div class="zoom-container">
+<img id="modalImagen">
+</div>
+
+<h2 id="modalNombre"></h2>
+<p id="modalMarca"></p>
+
+<div class="modal-botones">
+
+<button id="modalCotizar">
+Cotizar
+</button>
+
+<a id="modalFicha" target="_blank">
+Descargar ficha técnica
+</a>
+
+</div>
+
+</div>
+
+<!-- INFORMACION PRODUCTO -->
+
+<div class="modal-info">
+
+<ul class="tabs">
+
+<li class="tabBtn active" onclick="mostrarTab('detalle',event)">
+Detalle
+</li>
+
+<li class="tabBtn" onclick="mostrarTab('especificaciones',event)">
+Especificaciones
+</li>
+
+<li class="tabBtn" onclick="mostrarTab('categoria',event)">
+Categoría
+</li>
+
+</ul>
+
+<div id="detalle" class="tabContenido active">
+
+<p id="modalDescripcion"></p>
+
+</div>
+
+<div id="especificaciones" class="tabContenido">
+
+<table class="tablaEspecificaciones">
+
+<tr>
+<td>Nombre</td>
+<td id="specNombre"></td>
+</tr>
+
+<tr>
+<td>Marca</td>
+<td id="specMarca"></td>
+</tr>
+
+<tr>
+<td>Categoría</td>
+<td id="specCategoria"></td>
+</tr>
+
+</table>
+
+</div>
+
+<div id="categoria" class="tabContenido">
+
+<p id="modalCategoria"></p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCTOS RELACIONADOS -->
+
+<div class="modalRelacionados">
+
+<h3>Productos relacionados</h3>
+
+<div id="modalRelacionados" class="gridRelacionados"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= BOTON WHATSAPP ================= -->
+
+<a 
+href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20sus%20productos%20de%20laboratorio"
+class="btnWhatsAppFlotante"
+target="_blank">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+
+© 2026 Laboratorio | Todos los derechos reservados
+
+</p>
+
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="js/catalogo.js"></script>
+
+<script src="js/carrito.js"></script>
+
+<script src="js/producto.js"></script>
+
+</body>
+
+</html>

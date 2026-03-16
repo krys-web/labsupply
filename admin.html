@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Administrador de Productos</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>LAB SUPPLY</h1>
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="productos.html">Productos</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="descargas.html">Descargas</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+<li>
+<a href="cotizacion.html">
+Cotización 🛒
+<span id="contadorCotizacion">0</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+</header>
+
+<h2>Panel de Administración de Productos</h2>
+
+<!-- BUSCADOR -->
+
+<input
+type="text"
+id="buscarAdmin"
+placeholder="Buscar producto..."
+>
+
+<!-- FORMULARIO -->
+
+<form id="formProducto">
+
+<input type="hidden" id="productoIndex">
+
+<input type="text" id="nombre" placeholder="Nombre" required>
+
+<input type="text" id="categoria" placeholder="Categoria" required>
+
+<input type="text" id="marca" placeholder="Marca">
+
+<input type="text" id="keywords" placeholder="Keywords SEO">
+
+<textarea id="descripcion" placeholder="Descripción"></textarea>
+
+<input type="file" id="imagen">
+
+<input type="text" id="pdf" placeholder="PDF">
+
+<button type="submit">
+Guardar producto
+</button>
+
+</form>
+
+<hr>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nombre</th>
+<th>Marca</th>
+<th>Categoría</th>
+<th>Acciones</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaAdmin"></tbody>
+
+</table>
+
+<button onclick="exportarJSON()">
+Exportar productos.json
+</button>
+
+<script src="js/carrito.js"></script>
+<script src="js/admin.js"></script>
+
+<!-- BOTON WHATSAPP -->
+
+<a 
+href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20sus%20productos%20de%20laboratorio"
+class="btnWhatsAppFlotante"
+target="_blank"
+>
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+</body>
+
+</html>
