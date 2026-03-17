@@ -28,47 +28,80 @@ text-align:center;
 /* MENU */
 
 nav{
-background:#010c4b;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:15px 20px;
+
 }
 
-nav ul{
-display:flex;
-justify-content:center;
-list-style:none;
+
+/* LOGO */
+
+.logo img{
+
+height:90px;
+
+display:block;
+
 }
+
+/* Barra de navegacion menu */
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:25px;
+
+align-items:center;
+
+margin:0;
+
+padding:0;
+
+}
+
+/* Links */
 
 nav ul li{
 margin:0 15px;
 }
 
 nav ul li a{
-color:white;
+color:rgb(255, 255, 255);
 text-decoration:none;
 font-weight:bold;
 padding:10px;
 display:block;
 }
 
+nav ul li a{
+
+text-decoration:none;
+
+color:#fdfdfd;
+
+font-weight:500;
+
+transition:0.3s;
+
+}
+
 nav ul li a:hover{
-background:#004a82;
-border-radius:5px;
-}
 
-/* HERO */
+color:#c5f713;
 
-.hero{
-text-align:center;
-padding:80px 20px;
-background:#eaf2fb;
-}
-
-.hero h2{
-font-size:36px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
 }
 
 /* SECCIONES */
@@ -237,32 +270,48 @@ background:#005fa3;
 
 #paginacion{
 
-text-align:center;
+display:flex;
 
-margin:40px;
+justify-content:center;
+
+gap:8px;
+
+margin-top:40px;
 
 }
 
 #paginacion button{
 
-padding:10px 15px;
+padding:8px 14px;
 
-margin:5px;
+border:1px solid #ccc;
 
-border:none;
+background:white;
 
-background:#0077cc;
-
-color:white;
+cursor:pointer;
 
 border-radius:5px;
 
-cursor:pointer;
+font-weight:500;
 
 }
 
 #paginacion button:hover{
-background:#005fa3;
+
+background:#f0f0f0;
+
+}
+
+/* PAGINA ACTIVA */
+
+#paginacion button.active{
+
+background:#0f3d73;
+
+color:white;
+
+border-color:#0f3d73;
+
 }
 
 /* ===== CATALOGO PRODUCTOS ===== */
@@ -774,12 +823,79 @@ grid-template-columns:1fr;
 .gridProductos{
 
 display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 
-grid-template-columns:repeat(5,1fr);
+margin-top:40px;
 
-gap:20px;
+}
 
-margin-top:30px;
+
+.productoCard{
+
+background:white;
+
+border-radius:10px;
+
+padding:20px;
+
+text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+transition:all 0.3s ease;
+
+}
+
+
+.productoCard:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.productoCard img{
+
+width:100%;
+height:200px;
+object-fit:contain;
+
+margin-bottom:15px;
+
+}
+
+
+.productoCard h3{
+
+font-size:18px;
+margin-bottom:10px;
+
+}
+
+
+.productoCard button{
+
+background:#0f3d73;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:6px;
+
+cursor:pointer;
+
+}
+
+
+.productoCard button:hover{
+
+background:#0b2d55;
 
 }
 
@@ -1273,3 +1389,526 @@ border-radius:4px;
 background:#b52a37;
 
 }
+
+/* Diseño de index */
+/* CONTENEDOR GENERAL */
+
+.contenedor{
+max-width:1200px;
+margin:auto;
+padding:70px 20px;
+}
+
+
+/* SECCIONES */
+
+.seccion-blanca{
+background:white;
+color:#333;
+}
+
+.seccion-celeste{
+background:#e8f3ff;
+color:#333;
+}
+
+.seccion-azul{
+background:#0f3d73;
+color:white;
+}
+
+
+/* HERO */
+
+.hero{
+    
+background-image:linear-gradient(
+rgba(15,61,115,0.8),
+rgba(15,61,115,0.8)
+),
+url("../img/laboratorio-hero.jpg");
+
+background-size:cover;
+background-position:center;
+
+text-align:center;
+padding:140px 20px;
+color:white;
+
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+/* BUSCADOR */
+
+.buscador-home{
+text-align:center;
+}
+
+.buscador-home input{
+padding:12px;
+width:100%;
+max-width:450px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+
+/* BOTONES */
+
+.btn{
+background:#ff6600;
+color:white;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+}
+
+.btn:hover{
+background:#e65c00;
+}
+
+
+/* FOOTER */
+
+/*
+.footer{
+background:#1e1e1e;
+color:white;
+text-align:center;
+padding:25px;
+}*/
+
+/* Animar carta */
+.animar{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all 0.8s ease;
+
+}
+
+
+.animar.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ============================= */
+/* BLOG PRO */
+/* ============================= */
+
+.blogContainer{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.gridBlog{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+
+.blogCard:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* IMAGEN */
+
+.blogImg{
+    overflow:hidden;
+}
+
+.blogImg img{
+    transition:transform 0.5s ease;
+}
+
+.blogCard:hover img{
+    transform:scale(1.1);
+}
+
+/* CATEGORIA */
+
+.blogCategoria{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    background:#0a5bd3;
+    color:white;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:20px;
+}
+
+/* CONTENIDO */
+
+.blogContenido{
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+}
+
+/* UX MAS LIMPIO */
+.blogCard a{
+    position:relative;
+    z-index:2;
+}
+
+/* FECHA */
+
+.blogFecha{
+    font-size:12px;
+    color:#888;
+    margin-bottom:8px;
+}
+
+/* TITULO */
+
+.blogContenido h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* TEXTO */
+
+.blogContenido p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* BOTON */
+
+.btnLeer{
+    transition:all 0.3s ease;
+}
+
+.btnLeer:hover{
+    letter-spacing:1px;
+}
+
+.articuloContainer{
+    max-width:800px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.articuloContainer h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.articuloMeta{
+    color:#777;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.articuloContainer img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.articuloContainer p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* ============================= */
+/* HERO ARTICULO */
+/* ============================= */
+
+.articuloHero{
+    position:relative;
+    height:350px;
+    overflow:hidden;
+}
+
+.articuloHero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+/* CONTENIDO HERO */
+
+.heroContenido{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    text-align:center;
+    width:90%;
+    max-width:800px;
+}
+
+.categoria{
+    background:#0a5bd3;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.heroContenido h1{
+    font-size:32px;
+    margin:15px 0;
+}
+
+.meta{
+    font-size:14px;
+    color:#ddd;
+}
+
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+
+.articuloContenido{
+    padding:50px 20px;
+    background:#f9f9f9;
+}
+
+.contenidoWrapper{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contenidoWrapper p{
+    font-size:16px;
+    line-height:1.8;
+    color:#333;
+}
+
+/*  LAYOUT + SIDEBAR  */
+
+.layoutBlog{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* ARTICULO */
+.articulo img{
+    width:100%;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+.intro{
+    font-size:18px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.articulo h2{
+    margin-top:25px;
+}
+
+/* SIDEBAR */
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.widget{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.widget h3{
+    margin-bottom:10px;
+}
+
+/* CTA */
+.cta{
+    margin-top:30px;
+    padding:20px;
+    background:#0a5bd3;
+    color:white;
+    text-align:center;
+    border-radius:10px;
+}
+
+.cta a{
+    display:inline-block;
+    margin-top:10px;
+    background:white;
+    color:#0a5bd3;
+    padding:8px 15px;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .layoutBlog{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ANIMACION INICIAL */
+
+.blogCard{
+    opacity:1;
+    transform:translateY(0);
+    transition:all 0.6s ease;
+}
+
+/* SOLO LAS QUE SE ANIMAN */
+
+.blogCard.animar{
+opacity:0;
+transform:translateY(30px);
+}
+
+.blogCard.animar.show{
+opacity:1;
+transform:translateY(0);
+transition:all 0.6s ease;
+}
+
+/* =====================================
+FIX GLOBAL SIN ROMPER TU SISTEMA
+===================================== */
+
+/* 🔧 Evitar conflicto de botones */
+.btn{
+background:#0077cc !important;
+color:white !important;
+}
+
+.btn:hover{
+background:#005fa3 !important;
+}
+
+/* 🔧 FIX BLOG (esto es lo que te rompió todo) */
+.blogCard{
+display:flex !important;
+flex-direction:column !important;
+background:#fff !important;
+border-radius:10px !important;
+overflow:hidden !important;
+box-shadow:0 5px 15px rgba(0,0,0,0.1) !important;
+transition:0.3s !important;
+}
+
+.blogImg img{
+width:100% !important;
+height:180px !important;
+object-fit:cover !important;
+}
+
+.blogContenido{
+padding:15px !important;
+display:flex !important;
+flex-direction:column !important;
+flex:1 !important;
+}
+
+.blogContenido p{
+flex:1 !important;
+}
+
+/* 🔧 FIX LINK "LEER MÁS" */
+.blogCard a{
+text-decoration:none !important;
+color:inherit !important;
+display:block !important;
+height:100% !important;
+}
+
+/* 🔧 FIX GRID BLOG */
+.gridBlog{
+display:grid !important;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr)) !important;
+gap:30px !important;
+}
+
+/* 🔧 FIX MODAL TABS */
+.tab{
+display:none;
+}
+
+.tab.activo,
+.tab.active{
+display:block !important;
+}
+
+/* 🔧 FIX CONTENEDOR TAB ANTIGUO */
+.tab-contenido{
+display:none;
+}
+
+.tab-contenido.activo{
+display:block;
+}
+
+/* 🔧 FIX PRODUCTOS (evita desaparición) */
+.producto{
+display:block !important;
+}
+
+/* 🔧 FIX IMAGENES */
+.producto img{
+display:block;
+}
+
+/* 🔧 FIX HERO (index) */
+.hero{
+background-size:cover !important;
+background-position:center !important;
+}
+
+/* 🔧 FIX NAV RESPONSIVE */
+@media(max-width:768px){
+nav{
+flex-direction:column !important;
+}
+}
+
+
