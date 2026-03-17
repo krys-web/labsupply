@@ -1908,4 +1908,197 @@ flex-direction:column !important;
 }
 }
 
+/* ESTILO PARA BUSCADOR */
+/* CONTENEDOR GENERAL */
+.contenedorCotizacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* BUSCADOR */
+.buscadorCotizacion {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; /* ✅ izquierda */
+}
+
+/* INPUT MODERNO */
+.buscadorCotizacion input {
+    width: 320px;
+    max-width: 100%;
+    padding: 12px 16px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+}
+
+/* EFECTO HOVER */
+.buscadorCotizacion input:hover {
+    border-color: #bbb;
+}
+
+/* EFECTO FOCUS (PRO) */
+.buscadorCotizacion input:focus {
+    border-color: #007BFF;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+/* diseño para contador de productos */
+/* CONTENEDOR SUPERIOR */
+.topCotizacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* BUSCADOR */
+.buscadorCotizacion {
+    position: relative;
+}
+
+.buscadorCotizacion input {
+    width: 300px;
+    padding: 10px 15px 10px 35px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+/* ICONO LUPA */
+.buscadorCotizacion::before {
+    content: "🔍";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+/* FOCUS PRO */
+.buscadorCotizacion input:focus {
+    border-color: #007BFF;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+/* CONTADOR */
+.contadorProductos {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* NÚMERO DESTACADO */
+#totalProductos {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* contenedor grid */
+.contenedorCotizacionGrid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* BUSCADOR */
+.buscadorCotizacion {
+    margin-bottom: 15px;
+}
+
+.buscadorCotizacion input {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+}
+
+/* FOOTER TABLA */
+.resumenInferior {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* CARRITO LATERAL */
+.carritoResumen {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.resumenLinea {
+    margin: 10px 0;
+}
+
+.resumenTotal {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* BOTONES */
+.btnCarrito {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.btnCarritoSec {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* DISEÑO DETALLE CARRITO */
+.detalleCarrito {
+    margin-bottom: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.itemCarrito {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.itemNombre {
+    color: #333;
+}
+
+.itemCantidad {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+
 
