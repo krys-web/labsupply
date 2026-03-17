@@ -130,14 +130,14 @@ let carrito = obtenerCarrito();
 let producto = carrito.find(p => p.id == id);
 
 if(producto){
-
 producto.cantidad = Math.max(1, parseInt(cantidad));
-
 }
 
-guardarCarrito(carrito);
+localStorage.setItem("cotizacion", JSON.stringify(carrito));
 
+// ACTUALIZAR TODO
 mostrarCotizacion();
+actualizarContador(); //
 
 }
 
@@ -151,11 +151,12 @@ let carrito = obtenerCarrito();
 
 carrito = carrito.filter(p => p.id != id);
 
-guardarCarrito(carrito);
+localStorage.setItem("cotizacion", JSON.stringify(carrito));
 
+// ACTUALIZACIONES EN TIEMPO REAL
 mostrarCotizacion();
-
 actualizarResumenCotizacion();
+actualizarContador(); //
 
 }
 
@@ -165,11 +166,11 @@ actualizarResumenCotizacion();
 
 function vaciarCarrito(){
 
-    localStorage.removeItem("cotizacion");
+localStorage.removeItem("cotizacion");
 
-    mostrarCotizacion();
+mostrarCotizacion();
 
-    actualizarResumenCotizacion();
+actualizarContador(); //
 
 }
 
@@ -663,3 +664,25 @@ function renderDetalleCarrito() {
     });
 
 }
+
+function mostrarToast(mensaje) {
+
+    const container = document.getElementById("toastContainer");
+
+    if (!container) return;
+
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+    toast.textContent = mensaje;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+
+}
+
+window.addEventListener("storage", () => {
+    actualizarContador();
+});
