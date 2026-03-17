@@ -1,3 +1,5 @@
+console.log("COTIZACION JS CARGADO");
+
 // ======================================
 // OBTENER CARRITO
 // ======================================
@@ -12,10 +14,15 @@ return JSON.parse(localStorage.getItem("cotizacion")) || [];
 
 function guardarCarrito(carrito){
 
-localStorage.setItem("cotizacion", JSON.stringify(carrito));
+    carrito.forEach(p => {
+        if (!p.cantidad || p.cantidad < 1) {
+            p.cantidad = 1;
+        }
+    });
 
-actualizarContador?.();
+    localStorage.setItem("cotizacion", JSON.stringify(carrito));
 
+    actualizarResumenCotizacion();
 }
 
 // ======================================
@@ -24,18 +31,21 @@ actualizarContador?.();
 
 function mostrarCotizacion(){
 
-const carrito = obtenerCarrito();
+    const carrito = obtenerCarrito();
 
-const contenedor =
-document.getElementById("listaCotizacion");
+    const contenedor = document.getElementById("listaCotizacion");
 
-if(!contenedor) return;
+    if(!contenedor) return;
 
-renderCotizacion(carrito);
+    renderCotizacion(carrito);
 
-actualizarPasoProductos();
+    actualizarPasoProductos();
 
+    actualizarResumenCotizacion();
+
+    renderDetalleCarrito(); 
 }
+
 
 // ======================================
 // RENDER TABLA
@@ -145,6 +155,8 @@ guardarCarrito(carrito);
 
 mostrarCotizacion();
 
+actualizarResumenCotizacion();
+
 }
 
 // ======================================
@@ -153,11 +165,11 @@ mostrarCotizacion();
 
 function vaciarCarrito(){
 
-localStorage.removeItem("cotizacion");
+    localStorage.removeItem("cotizacion");
 
-mostrarCotizacion();
+    mostrarCotizacion();
 
-actualizarContador?.();
+    actualizarResumenCotizacion();
 
 }
 
@@ -180,6 +192,8 @@ p.nombre.toLowerCase().includes(texto)
 );
 
 renderCotizacion(filtrados);
+
+actualizarResumenCotizacion();
 
 }
 
@@ -378,11 +392,6 @@ alert("Cotización enviada correctamente");
 // EVENTOS
 // ======================================
 
-document.addEventListener(
-"DOMContentLoaded",
-mostrarCotizacion
-);
-
 const buscador =
 document.getElementById("buscarCotizacion");
 
@@ -517,8 +526,11 @@ document.getElementById("btnWhatsapp").disabled = false;
 document.getElementById("btnPDF").disabled = false;
 
 // actualizar pasos
-document.getElementById("paso2").classList.add("completo");
-document.getElementById("paso3").classList.add("activo");
+const paso2 = document.getElementById("paso2");
+const paso3 = document.getElementById("paso3");
+
+if(paso2) paso2.classList.add("completo");
+if(paso3) paso3.classList.add("activo");
 
 }
 
@@ -531,14 +543,17 @@ cargarDatosCliente
 
 function actualizarPasoProductos(){
 
-const carrito = obtenerCarrito();
+    const carrito = obtenerCarrito();
 
-if(carrito.length > 0){
+    const paso1 = document.getElementById("paso1");
+    const paso2 = document.getElementById("paso2");
 
-document.getElementById("paso1").classList.add("completo");
-document.getElementById("paso2").classList.add("activo");
+    if(!paso1 || !paso2) return; // 🔥 evita que rompa todo
 
-}
+    if(carrito.length > 0){
+        paso1.classList.add("completo");
+        paso2.classList.add("activo");
+    }
 
 }
 
@@ -573,3 +588,78 @@ alert("Datos del cliente eliminados");
 
 }
 
+// ================
+// SECCION CONTADOR
+// ================
+
+function actualizarContadorProductos() {
+
+    const lista = JSON.parse(localStorage.getItem("cotizacion")) || [];
+
+    document.getElementById("totalProductos").textContent = lista.length;
+
+}
+
+function actualizarResumenCotizacion() {
+
+    const lista = JSON.parse(localStorage.getItem("cotizacion")) || [];
+
+    let totalProductos = lista.length;
+    let totalItems = 0;
+
+    lista.forEach(prod => {
+
+        let cantidad = parseInt(prod.cantidad);
+
+        if (isNaN(cantidad) || cantidad < 1) {
+            cantidad = 1;
+        }
+
+        totalItems += cantidad;
+    });
+
+    console.log("Productos:", totalProductos);
+    console.log("Items:", totalItems);
+
+    document.getElementById("totalProductos").textContent = totalProductos;
+    document.getElementById("totalItems").textContent = totalItems;
+
+    document.getElementById("resumenProductos").textContent = totalProductos;
+    document.getElementById("resumenItems").textContent = totalItems;
+}
+
+// AL CARGAR LA PAGINA
+document.addEventListener("DOMContentLoaded", () => {
+    mostrarCotizacion(); // carga productos
+    actualizarResumenCotizacion(); // actualiza contadores
+});
+
+function renderDetalleCarrito() {
+
+    const lista = obtenerCarrito();
+
+    const contenedor = document.getElementById("detalleCarrito");
+
+    if (!contenedor) return;
+
+    contenedor.innerHTML = "";
+
+    if (lista.length === 0) {
+        contenedor.innerHTML = "<p>Sin productos</p>";
+        return;
+    }
+
+    lista.forEach(p => {
+
+        const cantidad = Number(p.cantidad) || 1;
+
+        contenedor.innerHTML += `
+            <div class="itemCarrito">
+                <span class="itemNombre">${p.nombre}</span>
+                <span class="itemCantidad">x${cantidad}</span>
+            </div>
+        `;
+
+    });
+
+}
