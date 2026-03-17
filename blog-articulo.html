@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artículo</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">
+<img src="img/logo labsupply.png">
+</div>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+<li><a href="productos.html">Productos</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="descargas.html">Descargas</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+
+<li>
+<a href="cotizacion.html">
+Cotización 🛒
+<span id="contadorCotizacion">0</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- LAYOUT PRINCIPAL -->
+
+<main class="layoutBlog">
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <article class="articulo">
+
+        <h1 id="titulo"></h1>
+
+        <div class="meta">
+            <span id="fecha"></span> · 
+            <span id="categoria"></span> · 
+            <span id="lectura"></span>
+        </div>
+
+        <img id="imagen" src="" alt="">
+
+        <!-- INTRO -->
+        <p id="introduccion" class="intro"></p>
+
+        <!-- CUERPO -->
+        <div id="contenido"></div>
+
+        <!-- CONCLUSION -->
+        <h2>Conclusión</h2>
+        <p id="conclusion"></p>
+
+        <!-- CTA -->
+        <div class="cta">
+            <p>¿Necesitas equipos de laboratorio?</p>
+            <a href="contacto.html">Contáctanos</a>
+        </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="widget">
+            <h3>Buscar</h3>
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <div class="widget">
+            <h3>Categorías</h3>
+            <ul>
+                <li>Equipos</li>
+                <li>Consumibles</li>
+                <li>Química</li>
+            </ul>
+        </div>
+
+        <div class="widget">
+            <h3>Entradas recientes</h3>
+            <ul id="recientes"></ul>
+        </div>
+
+    </aside>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<p>
+Lab Supply © 2026 Laboratorio | Todos los derechos reservados
+</p>
+
+</footer>
+
+<!-- BOTON WHATSAPP -->
+
+<a 
+href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20sus%20productos%20de%20laboratorio"
+class="btnWhatsAppFlotante"
+target="_blank"
+>
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+<script src="js/blog-articulo.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/producto.js"></script>
+
+</body>
+</html>
