@@ -2,32 +2,25 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Cotización de Productos</title>
-
 <meta name="description" content="Solicitud de cotización de productos de laboratorio">
 
 <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
 
 <!-- HEADER -->
-
 <header>
-
 <nav>
-
 <div class="logo">
-    <img src="img/logo labsupply.png">
+    <img src="img/logo labsupply.png" alt="Lab Supply">
 </div>
 
 <ul>
-
 <li><a href="index.html">Inicio</a></li>
 <li><a href="productos.html">Productos</a></li>
 <li><a href="blog.html">Blog</a></li>
@@ -35,112 +28,105 @@
 <li><a href="contacto.html">Contacto</a></li>
 <li>
 <a href="cotizacion.html">
-Cotización 🛒
+Cotización 📄
 <span id="contadorCotizacion">0</span>
 </a>
 </li>
-
 </ul>
-
 </nav>
-
 </header>
 
-
 <!-- TITULO -->
-
 <section class="tituloPagina">
-
 <h2>Solicitud de Cotización</h2>
+<p>Productos agregados a tu solicitud</p>
+</section>
 
-<p>
-Productos agregados a tu solicitud
-</p>
+<!-- CONTENEDOR PRINCIPAL -->
+<section class="contenedorCotizacionGrid">
+
+    <!-- IZQUIERDA -->
+    <div class="cotizacionPrincipal">
+
+        <!-- BUSCADOR -->
+        <div class="buscadorCotizacion">
+            <input
+                type="text"
+                id="buscarCotizacion"
+                placeholder="    Buscar producto..."
+                onkeyup="buscarEnCotizacion()"
+            >
+        </div>
+
+        <!-- TABLA -->
+        <div class="tablaCotizacion">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Marca</th>
+                        <th>Categoría</th>
+                        <th>Cantidad</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="listaCotizacion"></tbody>
+            </table>
+        </div>
+
+        <!-- FOOTER TABLA -->
+    <div class="resumenInferior">
+
+    <div class="contadorInferior">
+        <span id="totalProductos">0</span> productos |
+        <span id="totalItems">0</span> ítems
+    </div>
+
+    </div>
+
+    </div>
+
+    <!-- DERECHA (CARRITO) -->
+    <aside class="carritoResumen">
+
+    <h3>Resumen de cotización</h3>
+
+    <div id="detalleCarrito" class="detalleCarrito"></div>
+
+    <div class="resumenLinea">
+        Productos: <span id="resumenProductos">0</span>
+    </div>
+
+    <div class="resumenLinea">
+        Ítems: <span id="resumenItems">0</span>
+    </div>
+
+    <button onclick="enviarWhatsApp()" class="btnCarrito">
+        Enviar por WhatsApp
+    </button>
+
+    <button onclick="generarPDF()" class="btnCarritoSec">
+        Descargar PDF
+    </button>
+
+</aside>
 
 </section>
 
+<!-- DATOS CLIENTE -->
+<section class="seccionCliente">
 
-<!-- BUSCADOR -->
-
-<div class="buscadorCotizacion">
-
-<input
-type="text"
-id="buscarCotizacion"
-placeholder="Buscar producto en cotización..."
-onkeyup="buscarEnCotizacion()"
->
-
-</div>
-
-<!-- Indicador de pasos -->
-
-<div class="pasosCotizacion">
-
-<div class="paso activo" id="paso1">
-<span>1</span>
-<p>Productos</p>
-</div>
-
-<div class="lineaPaso"></div>
-
-<div class="paso" id="paso2">
-<span>2</span>
-<p>Datos cliente</p>
-</div>
-
-<div class="lineaPaso"></div>
-
-<div class="paso" id="paso3">
-<span>3</span>
-<p>Enviar cotización</p>
-</div>
-
-</div>
-
-
-<!-- TABLA DE PRODUCTOS -->
-
-<section class="tablaCotizacion">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Imagen</th>
-<th>Producto</th>
-<th>Marca</th>
-<th>Categoría</th>
-<th>Cantidad</th>
-<th>Acción</th>
-
-</tr>
-
-</thead>
-
-<tbody id="listaCotizacion">
-
-</tbody>
-
-</table>
-
-</section>
-
-<!-- FORMULARIO DATOS DEL CLIENTE -->
 <h2>Datos del solicitante</h2>
 
 <div class="form-cotizacion">
 
 <input type="text" id="nombreCliente" placeholder="Nombre completo">
-
 <input type="text" id="empresaCliente" placeholder="Empresa">
-
 <input type="email" id="correoCliente" placeholder="Correo electrónico">
-
 <input type="tel" id="telefonoCliente" placeholder="Teléfono">
 
+<div class="accionesCliente">
 <button onclick="guardarDatosCliente()" class="btnGuardarDatos">
 Guardar datos
 </button>
@@ -148,26 +134,19 @@ Guardar datos
 <button onclick="borrarDatosCliente()" class="btnBorrarDatos">
 Borrar datos
 </button>
+</div>
 
 </div>
 
-<!-- FORMULARIO CORREO -->
+</section>
 
+<!-- ENVÍO CORREO -->
 <section class="formularioCorreo">
 
 <h3>Enviar cotización por correo</h3>
 
-<input
-type="text"
-id="nombreCliente"
-placeholder="Nombre"
->
-
-<input
-type="email"
-id="correoCliente"
-placeholder="Correo"
->
+<input type="text" id="nombreEnvio" placeholder="Nombre">
+<input type="email" id="correoEnvio" placeholder="Correo">
 
 <button onclick="enviarCorreo()">
 Enviar cotización
@@ -175,9 +154,7 @@ Enviar cotización
 
 </section>
 
-
-<!-- BOTONES -->
-
+<!-- ACCIONES -->
 <section class="accionesCotizacion">
 
 <button onclick="vaciarCarrito()" class="btnEliminar">
@@ -189,57 +166,40 @@ Enviar por WhatsApp
 </button>
 
 <button id="btnPDF" onclick="generarPDF()" disabled>
-Descargar cotización PDF
+Descargar PDF
 </button>
 
 </section>
 
-
-<!-- LIBRERIAS -->
-
+<!-- LIBRERÍAS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
 (function(){
-emailjs.init("TU_PUBLIC_KEY");
+    emailjs.init("TU_PUBLIC_KEY");
 })();
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="js/cotizacion.js"></script>
-
-
-
-<!-- JS -->
-
-<script src="js/carrito.js"></script>
-
 
 
 <!-- FOOTER -->
-
 <footer>
-
-<p>
-
-Lab Supply © 2026 Laboratorio | Todos los derechos reservados
-
-</p>
-
+<p>Lab Supply © 2026 Laboratorio | Todos los derechos reservados</p>
 </footer>
 
-<!-- BOTON WHATSAPP -->
-
+<!-- WHATSAPP -->
 <a 
 href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20sus%20productos%20de%20laboratorio"
 class="btnWhatsAppFlotante"
 target="_blank"
 >
-
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
 </a>
 
-</body>
+<!-- JS -->
+<script src="js/cotizacion.js"></script>
+<script src="js/carrito.js"></script>
 
+</body>
 </html>
