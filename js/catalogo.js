@@ -4,7 +4,9 @@ let paginaActual = 1;
 let productosPorPagina = 12;
 
 
+// ===============================
 // CARGAR PRODUCTOS
+// ===============================
 
 async function cargarProductos(){
 
@@ -29,7 +31,9 @@ console.error("Error cargando productos:", error);
 }
 
 
+// ===============================
 // MOSTRAR PRODUCTOS
+// ===============================
 
 function mostrarProductos(){
 
@@ -37,7 +41,7 @@ let contenedor = document.getElementById("productos");
 
 contenedor.innerHTML = "";
 
-let inicio = (paginaActual-1) * productosPorPagina;
+let inicio = (paginaActual - 1) * productosPorPagina;
 let fin = inicio + productosPorPagina;
 
 let productosPagina = productosFiltrados.slice(inicio,fin);
@@ -71,7 +75,9 @@ generarPaginacion();
 }
 
 
+// ===============================
 // BUSCADOR
+// ===============================
 
 function buscarProductos(){
 
@@ -95,7 +101,9 @@ mostrarProductos();
 }
 
 
+// ===============================
 // FILTRO
+// ===============================
 
 function filtrarCategoria(){
 
@@ -120,7 +128,9 @@ mostrarProductos();
 }
 
 
-// PAGINACIÓN
+// ===============================
+// PAGINACION
+// ===============================
 
 function paginaAnterior(){
 
@@ -151,7 +161,9 @@ mostrarProductos();
 }
 
 
+// ===============================
 // GENERAR PAGINACION
+// ===============================
 
 function generarPaginacion(){
 
@@ -164,10 +176,12 @@ if(!contenedor) return;
 
 contenedor.innerHTML = "";
 
-for(let i=1;i<=totalPaginas;i++){
+for(let i = 1; i <= totalPaginas; i++){
+
+let claseActiva = (i === paginaActual) ? "active" : "";
 
 contenedor.innerHTML += `
-<button onclick="cambiarPagina(${i})">
+<button class="${claseActiva}" onclick="cambiarPagina(${i})">
 ${i}
 </button>
 `;
@@ -177,16 +191,27 @@ ${i}
 }
 
 
+// ===============================
+// CAMBIAR PAGINA
+// ===============================
+
 function cambiarPagina(p){
 
 paginaActual = p;
 
 mostrarProductos();
 
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
 }
 
 
+// ===============================
 // MODAL PRODUCTO
+// ===============================
 
 function abrirProducto(id){
 
@@ -213,12 +238,20 @@ mostrarTab("detalle");
 }
 
 
+// ===============================
+// CERRAR MODAL
+// ===============================
+
 function cerrarProducto(){
 
 document.getElementById("modalProducto").style.display = "none";
 
 }
 
+
+// ===============================
+// TABS DEL MODAL
+// ===============================
 
 function mostrarTab(tab){
 
@@ -231,7 +264,9 @@ document.getElementById(tab).style.display="block";
 }
 
 
+// ===============================
 // EVENTOS
+// ===============================
 
 document
 .getElementById("buscador")
@@ -242,11 +277,17 @@ document
 .addEventListener("change", filtrarCategoria);
 
 
+// ===============================
 // INICIAR
+// ===============================
 
 cargarProductos();
 
-// Decargar ficha técnica
+
+// ===============================
+// DESCARGAR FICHA TECNICA
+// ===============================
+
 function descargarFicha(pdf){
 
 window.open(pdf,"_blank");
