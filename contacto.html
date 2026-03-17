@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contacto | LAB SUPPLY</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <meta name="description" content="Contacto para solicitar información o cotizaciones de productos de laboratorio">
 
 <link rel="stylesheet" href="css/estilos.css">
@@ -34,9 +34,17 @@
 <li><a href="descargas.html">Descargas</a></li>
 <li><a href="contacto.html">Contacto</a></li>
 <li>
-<a href="cotizacion.html">
-Cotización 📄
-<span id="contadorCotizacion">0</span>
+<a href="cotizacion.html" class="link-cotizacion">
+
+    <span>Cotización</span>
+
+    <div class="icono-cotizacion">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <i class="fa-solid fa-calculator"></i>
+    </div>
+
+    <span id="contadorCotizacion">0</span>
+
 </a>
 </li>
 
@@ -150,6 +158,9 @@ target="_blank"
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 
 </a>
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
 
 </body>
 

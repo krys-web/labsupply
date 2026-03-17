@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <title>Cotización de Productos</title>
 <meta name="description" content="Solicitud de cotización de productos de laboratorio">
 
@@ -27,9 +27,17 @@
 <li><a href="descargas.html">Descargas</a></li>
 <li><a href="contacto.html">Contacto</a></li>
 <li>
-<a href="cotizacion.html">
-Cotización 📄
-<span id="contadorCotizacion">0</span>
+<a href="cotizacion.html" class="link-cotizacion">
+
+    <span>Cotización</span>
+
+    <div class="icono-cotizacion">
+        <i class="fa-solid fa-clipboard-check"></i>
+        <i class="fa-solid fa-calculator"></i>
+    </div>
+
+    <span id="contadorCotizacion">0</span>
+
 </a>
 </li>
 </ul>
@@ -200,6 +208,9 @@ target="_blank"
 <!-- JS -->
 <script src="js/cotizacion.js"></script>
 <script src="js/carrito.js"></script>
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
 
 </body>
 </html>
