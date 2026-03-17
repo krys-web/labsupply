@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cómo elegir un microscopio de laboratorio",
+    "introduccion": "Elegir el microscopio adecuado es clave para obtener resultados precisos en el laboratorio.",
+    "contenido": [
+      {
+        "subtitulo": "Tipos de microscopios",
+        "texto": "Existen microscopios ópticos, electrónicos y digitales. Cada uno tiene aplicaciones específicas según el tipo de análisis."
+      },
+      {
+        "subtitulo": "Factores a considerar",
+        "texto": "Debes evaluar aumento, resolución, iluminación y tipo de muestra."
+      }
+    ],
+    "conclusion": "Seleccionar el equipo correcto mejora significativamente la calidad de los resultados.",
+    "imagen": "img/productos/pipeta.jpg",
+    "categoria": "Equipos",
+    "fecha": "10 Mar 2026",
+    "lectura": "5 min"
+  },
+
+{
+    "id": 2,
+    "titulo": "Cómo elegir un microscopio de laboratorio",
+    "introduccion": "Elegir el microscopio adecuado es clave para obtener resultados precisos en el laboratorio.",
+    "contenido": [
+      {
+        "subtitulo": "Tipos de microscopios",
+        "texto": "Existen microscopios ópticos, electrónicos y digitales. Cada uno tiene aplicaciones específicas según el tipo de análisis."
+      },
+      {
+        "subtitulo": "Factores a considerar",
+        "texto": "Debes evaluar aumento, resolución, iluminación y tipo de muestra."
+      }
+    ],
+    "conclusion": "Seleccionar el equipo correcto mejora significativamente la calidad de los resultados.",
+    "imagen": "img/productos/probeta-100.jpg",
+    "categoria": "Equipos",
+    "fecha": "10 Mar 2026",
+    "lectura": "5 min"
+  },
+
+{
+    "id": 3,
+    "titulo": "Cómo elegir un microscopio de laboratorio",
+    "introduccion": "Elegir el microscopio adecuado es clave para obtener resultados precisos en el laboratorio.",
+    "contenido": [
+      {
+        "subtitulo": "Tipos de microscopios",
+        "texto": "Existen microscopios ópticos, electrónicos y digitales. Cada uno tiene aplicaciones específicas según el tipo de análisis."
+      },
+      {
+        "subtitulo": "Factores a considerar",
+        "texto": "Debes evaluar aumento, resolución, iluminación y tipo de muestra."
+      }
+    ],
+    "conclusion": "Seleccionar el equipo correcto mejora significativamente la calidad de los resultados.",
+    "imagen": "img/productos/agitador-magnetico.jpg",
+    "categoria": "Equipos",
+    "fecha": "10 Mar 2026",
+    "lectura": "5 min"
+  },
+
+{
+    "id": 4,
+    "titulo": "Cómo elegir un microscopio de laboratorio",
+    "introduccion": "Elegir el microscopio adecuado es clave para obtener resultados precisos en el laboratorio.",
+    "contenido": [
+      {
+        "subtitulo": "Tipos de microscopios",
+        "texto": "Existen microscopios ópticos, electrónicos y digitales. Cada uno tiene aplicaciones específicas según el tipo de análisis."
+      },
+      {
+        "subtitulo": "Factores a considerar",
+        "texto": "Debes evaluar aumento, resolución, iluminación y tipo de muestra."
+      }
+    ],
+    "conclusion": "Seleccionar el equipo correcto mejora significativamente la calidad de los resultados.",
+    "imagen": "img/productos/centrifuga.jpg",
+    "categoria": "Equipos",
+    "fecha": "10 Mar 2026",
+    "lectura": "5 min"
+  }
+
+
+
+]
