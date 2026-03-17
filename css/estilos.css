@@ -1539,7 +1539,8 @@ transform:translateY(0);
 /* IMAGEN */
 
 .blogImg{
-    overflow:hidden;
+position:relative;
+z-index:1;
 }
 
 .blogImg img{
@@ -1553,23 +1554,18 @@ transform:translateY(0);
 /* CATEGORIA */
 
 .blogCategoria{
-    position:absolute;
-    bottom:10px;
-    left:10px;
-    background:#0a5bd3;
-    color:white;
-    font-size:12px;
-    padding:5px 10px;
-    border-radius:20px;
+position:absolute;
+bottom:10px;
+left:10px;
+z-index:2;
+pointer-events:none;
 }
 
 /* CONTENIDO */
 
 .blogContenido{
-    padding:18px;
-    display:flex;
-    flex-direction:column;
-    flex-grow:1;
+position:relative;
+z-index:3;
 }
 
 /* UX MAS LIMPIO */
@@ -1604,7 +1600,8 @@ transform:translateY(0);
 /* BOTON */
 
 .btnLeer{
-    transition:all 0.3s ease;
+position:relative;
+z-index:4;
 }
 
 .btnLeer:hover{
