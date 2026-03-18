@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <title>Cotización de Productos</title>
 <meta name="description" content="Solicitud de cotización de productos de laboratorio">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
 <!-- HEADER -->
@@ -19,7 +16,6 @@
 <div class="logo">
     <img src="img/logo labsupply.png" alt="Lab Supply">
 </div>
-
 <ul>
 <li><a href="index.html">Inicio</a></li>
 <li><a href="productos.html">Productos</a></li>
@@ -28,16 +24,12 @@
 <li><a href="contacto.html">Contacto</a></li>
 <li>
 <a href="cotizacion.html" class="link-cotizacion">
-
     <span>Cotización</span>
-
     <div class="icono-cotizacion">
         <i class="fa-solid fa-clipboard-check"></i>
         <i class="fa-solid fa-calculator"></i>
     </div>
-
     <span id="contadorCotizacion">0</span>
-
 </a>
 </li>
 </ul>
@@ -53,24 +45,20 @@
 <!-- CONTENEDOR PRINCIPAL -->
 <section class="contenedorCotizacionGrid">
 
-    <!-- IZQUIERDA -->
+    <!-- IZQUIERDA: TABLA PRINCIPAL -->
     <div class="cotizacionPrincipal">
 
         <!-- BUSCADOR -->
         <div class="buscadorCotizacion">
-            <input
-                type="text"
-                id="buscarCotizacion"
-                placeholder="    Buscar producto..."
-                onkeyup="buscarEnCotizacion()"
-            >
+            <input type="text" id="buscarCotizacion" placeholder="Buscar producto...">
         </div>
 
-        <!-- TABLA -->
+        <!-- TABLA DE PRODUCTOS -->
         <div class="tablaCotizacion">
             <table>
                 <thead>
                     <tr>
+                        <th>#</th>
                         <th>Imagen</th>
                         <th>Producto</th>
                         <th>Marca</th>
@@ -81,136 +69,95 @@
                 </thead>
                 <tbody id="listaCotizacion"></tbody>
             </table>
+
+            <!-- RESUMEN INFERIOR -->
+            <div class="resumenInferior">
+                <div class="contadorInferior">
+                    <span id="totalProductos">0</span> productos |
+                    <span id="totalItems">0</span> ítems
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DERECHA: VENTANA FLOTANTE (RESUMEN) -->
+    <aside class="carritoResumen card">
+        <h3>Resumen de cotización</h3>
+
+        <!-- Detalle de productos resumido -->
+        <div id="detalleCarrito" class="detalleCarrito">
+            <p>Sin productos</p>
         </div>
 
-        <!-- FOOTER TABLA -->
-    <div class="resumenInferior">
+        <!-- Totales -->
+        <div class="resumenLinea">
+            Productos: <span id="resumenProductos">0</span>
+        </div>
+        <div class="resumenLinea">
+            Ítems: <span id="resumenItems">0</span>
+        </div>
 
-    <div class="contadorInferior">
-        <span id="totalProductos">0</span> productos |
-        <span id="totalItems">0</span> ítems
-    </div>
+        <!-- Botones de acción -->
+        <div class="accionesCarrito">
+            <button id="btnCorreo" onclick="enviarCorreo()" class="btn btn-primary" disabled>
+                Enviar cotización por correo
+            </button>
+            <button id="btnWhatsapp" onclick="enviarWhatsApp()" class="btn btn-success" disabled>
+                Enviar por WhatsApp
+            </button>
+            <button id="btnPDF" onclick="generarPDF()" class="btn btn-secondary" disabled>
+                Descargar PDF
+            </button>
+            <button onclick="vaciarCotizacion()" class="btn btn-danger">
+                Vaciar cotización
+            </button>
+        </div>
+    </aside>
 
-    </div>
+    <!-- SECCIÓN DATOS DEL CLIENTE -->
+    <section class="seccionCliente card">
+        <h2>Datos del solicitante</h2>
 
-    </div>
+        <div class="form-cotizacion">
+            <input type="text" id="nombreCliente" placeholder="Nombre completo">
+            <input type="text" id="empresaCliente" placeholder="Empresa">
+            <input type="email" id="correoCliente" placeholder="Correo electrónico">
+            <input type="tel" id="telefonoCliente" placeholder="Teléfono">
 
-    <!-- DERECHA (CARRITO) -->
-    <aside class="carritoResumen">
-
-    <h3>Resumen de cotización</h3>
-
-    <div id="detalleCarrito" class="detalleCarrito"></div>
-
-    <div class="resumenLinea">
-        Productos: <span id="resumenProductos">0</span>
-    </div>
-
-    <div class="resumenLinea">
-        Ítems: <span id="resumenItems">0</span>
-    </div>
-
-    <button onclick="enviarWhatsApp()" class="btnCarrito">
-        Enviar por WhatsApp
-    </button>
-
-    <button onclick="generarPDF()" class="btnCarritoSec">
-        Descargar PDF
-    </button>
-
-</aside>
-
-</section>
-
-<!-- DATOS CLIENTE -->
-<section class="seccionCliente">
-
-<h2>Datos del solicitante</h2>
-
-<div class="form-cotizacion">
-
-<input type="text" id="nombreCliente" placeholder="Nombre completo">
-<input type="text" id="empresaCliente" placeholder="Empresa">
-<input type="email" id="correoCliente" placeholder="Correo electrónico">
-<input type="tel" id="telefonoCliente" placeholder="Teléfono">
-
-<div class="accionesCliente">
-<button onclick="guardarDatosCliente()" class="btnGuardarDatos">
-Guardar datos
-</button>
-
-<button onclick="borrarDatosCliente()" class="btnBorrarDatos">
-Borrar datos
-</button>
-</div>
-
-</div>
+            <!-- Botón para borrar datos -->
+            <div class="accionesCliente">
+                <button onclick="borrarDatosCliente()" class="btn btn-danger">
+                    Borrar datos
+                </button>
+            </div>
+        </div>
+    </section>
 
 </section>
 
-<!-- ENVÍO CORREO -->
-<section class="formularioCorreo">
-
-<h3>Enviar cotización por correo</h3>
-
-<input type="text" id="nombreEnvio" placeholder="Nombre">
-<input type="email" id="correoEnvio" placeholder="Correo">
-
-<button onclick="enviarCorreo()">
-Enviar cotización
-</button>
-
-</section>
-
-<!-- ACCIONES -->
-<section class="accionesCotizacion">
-
-<button onclick="vaciarCarrito()" class="btnEliminar">
-Vaciar cotización
-</button>
-
-<button id="btnWhatsapp" onclick="enviarWhatsApp()" disabled>
-Enviar por WhatsApp
-</button>
-
-<button id="btnPDF" onclick="generarPDF()" disabled>
-Descargar PDF
-</button>
-
-</section>
+<!-- TOAST -->
+<div id="toastContainer" class="toastContainer"></div>
 
 <!-- LIBRERÍAS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
 <script>
-(function(){
-    emailjs.init("TU_PUBLIC_KEY");
-})();
+(function(){ emailjs.init("TU_PUBLIC_KEY"); })();
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
+<!-- JS -->
+<script src="js/cotizacion.js"></script>
+<script src="js/carrito.js"></script>
 
 <!-- FOOTER -->
 <footer>
 <p>Lab Supply © 2026 Laboratorio | Todos los derechos reservados</p>
 </footer>
 
-<!-- WHATSAPP -->
-<a 
-href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20sus%20productos%20de%20laboratorio"
-class="btnWhatsAppFlotante"
-target="_blank"
->
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/593XXXXXXXXX?text=Hola,%20deseo%20información%20sobre%20sus%20productos" class="btnWhatsAppFlotante" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
-
-<!-- JS -->
-<script src="js/cotizacion.js"></script>
-<script src="js/carrito.js"></script>
-
-<!-- CONTENEDOR DE ALERTAS -->
-<div id="toastContainer" class="toast-container"></div>
 
 </body>
 </html>
