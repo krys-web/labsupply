@@ -239,28 +239,6 @@ margin-bottom:15px;
 
 /* BOTONES */
 
-.btn{
-
-display:inline-block;
-
-background:#0077cc;
-
-color:white;
-
-padding:10px 20px;
-
-border:none;
-
-border-radius:5px;
-
-margin-top:10px;
-
-cursor:pointer;
-
-text-decoration:none;
-
-}
-
 .btn:hover{
 background:#005fa3;
 }
@@ -357,14 +335,25 @@ margin-bottom:10px;
 }
 
 .btn{
-background:#0077cc;
-color:white;
-padding:10px 18px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-display:inline-block;
-text-decoration:none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* ICONOS */
+.btn i{
+    font-size: 16px;
 }
 
 .btn:hover{
@@ -633,16 +622,16 @@ padding:6px 10px;
 cursor:pointer;
 
 }
-
+/*
 .btnWhatsApp{
 
-background:#25D366;
+background:#073ceb;
 color:white;
 border:none;
 padding:10px 20px;
 cursor:pointer;
 
-}
+}*/
 
 .accionesCotizacion{
 
@@ -691,15 +680,16 @@ cursor:pointer;
 
 }
 
+/*
 .btnWhatsApp{
 
-background:#25D366;
+background:#0435bd;
 color:white;
 padding:10px 15px;
 display:inline-block;
 text-decoration:none;
 
-}
+}*/
 
 .mapa{
 
@@ -1468,30 +1458,7 @@ border:1px solid #ccc;
 
 /* BOTONES */
 
-.btn{
-background:#ff6600;
-color:white;
-padding:12px 25px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-}
 
-.btn:hover{
-background:#e65c00;
-}
-
-
-/* FOOTER */
-
-/*
-.footer{
-background:#1e1e1e;
-color:white;
-text-align:center;
-padding:25px;
-}*/
 
 /* Animar carta */
 .animar{
@@ -1814,10 +1781,7 @@ FIX GLOBAL SIN ROMPER TU SISTEMA
 ===================================== */
 
 /* 🔧 Evitar conflicto de botones */
-.btn{
-background:#0077cc !important;
-color:white !important;
-}
+
 
 .btn:hover{
 background:#005fa3 !important;
@@ -2037,12 +2001,18 @@ flex-direction:column !important;
 
 /* CARRITO LATERAL */
 .carritoResumen {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    height: fit-content;
-    position: sticky;
-    top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    position: sticky;       /* se mantiene visible mientras scroll */
+    top: 20px;              /* margen superior desde la ventana */
+    max-height: 100vh;       /* altura máxima hasta los datos del cliente (ajustable) */
+    overflow-y: auto;       /* scroll interno si hay muchos productos */
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .resumenLinea {
@@ -2078,26 +2048,82 @@ flex-direction:column !important;
 
 /* DISEÑO DETALLE CARRITO */
 .detalleCarrito {
-    margin-bottom: 15px;
-    max-height: 200px;
+    flex: 1;   
+    max-height: none;
     overflow-y: auto;
+    padding-right: 5px;
+    font-size: 13px;
 }
 
+/* Detalle de cada producto */
 .itemCarrito {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    gap: 10px;
     padding: 6px 0;
     border-bottom: 1px solid #eee;
 }
 
+.itemCarrito:last-child {
+    border-bottom: none;
+}
+
+/* Botón eliminar en flotante */
+.itemCarrito button {
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.itemCarrito button:hover {
+    background: #c0392b;
+}
+
+/* Totales dentro del panel flotante */
+.resumenLinea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Botones SIEMPRE visibles */
+.accionesCarrito {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+.accionesCarrito .btn {
+    width: 100%;
+}
+
+/* Opcional: scrollbar personalizado */
+.carritoResumen::-webkit-scrollbar {
+    width: 6px;
+}
+
+.carritoResumen::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
 .itemNombre {
-    color: #333;
+    font-size: 13px;
 }
 
 .itemCantidad {
-    font-weight: bold;
-    color: #007BFF;
+    font-size: 12px;
+    color: #666;
 }
 
 /* Diseño icono cotización */
@@ -2142,5 +2168,283 @@ flex-direction:column !important;
     100% {opacity: 0; transform: translateY(-10px);}
 }
 
+.tabla-cotizacion {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-cotizacion thead {
+    background: #f5f7fa;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.tabla-cotizacion th,
+.tabla-cotizacion td {
+    padding: 12px 10px;
+    text-align: center;
+}
+
+.tabla-cotizacion tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: all 0.2s ease;
+}
+
+.tabla-cotizacion tbody tr:hover {
+    background: #f9fbfd;
+}
+
+/* Columna número */
+.col-numero {
+    font-weight: bold;
+    color: #999;
+}
+
+/* Nombre producto */
+.col-nombre {
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Botón eliminar */
+.col-accion button {
+    background: #ff4d4f;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.col-accion button:hover {
+    background: #d9363e;
+}
+
+/* ================================
+   VARIANTES
+================================ */
+
+/* WHATSAPP / PRINCIPAL */
+.btn-primary{
+    background: #03035e;
+    color: white;
+}
+
+.btn-primary:hover{
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+/* PDF */
+.btn-secondary{
+    background: #03035e;
+    color: white;
+}
+
+.btn-secondary:hover{
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* GUARDAR */
+.btn-success{
+    background: #03035e;
+    color: white;
+}
+
+.btn-success:hover{
+    background: #27ae60;
+}
+
+/* ELIMINAR */
+.btn-danger{
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover{
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* ================================
+   ESTADO DISABLED
+================================ */
+.btn:disabled{
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
 
 
+/* BOTON PEQUEÑO (TABLAS) */
+.btn-sm{
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+/* SOLO ICONO (OPCIONAL) */
+.btn-icon{
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+}
+
+/* ================================
+   CARD (CUADROS)
+================================ */
+.card{
+    background: #f4f6f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* TITULOS */
+.card h2,
+.card h3{
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ================================
+   FORMULARIOS
+================================ */
+.form-cotizacion,
+.formularioCorreo{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* INPUTS */
+input{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+/* EFECTO FOCUS */
+input:focus{
+    border-color: #25D366;
+    box-shadow: 0 0 0 3px rgba(37,211,102,0.15);
+}
+
+/* PLACEHOLDER */
+input::placeholder{
+    color: #999;
+}
+
+/* ================================
+   ACCIONES CLIENTE
+================================ */
+.accionesCliente{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ================================
+   BOTONES EN BLOQUE
+================================ */
+.formularioCorreo .btn{
+    margin-top: 10px;
+}
+
+/* ================================
+   ACCIONES COTIZACION
+================================ */
+.accionesCotizacion{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.accionesCotizacion .btn{
+    flex: 1;
+    min-width: 180px;
+}
+
+/* ================================
+   VALIDACIONES VISUALES
+================================ */
+
+.input-error{
+    border: 1px solid #e74c3c !important;
+    background: #fff5f5;
+}
+
+.input-ok{
+    border: 1px solid #2ecc71 !important;
+    background: #f4fff7;
+}
+
+/* MENSAJE ERROR */
+.mensaje-error{
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 2px;
+}
+
+/* CONTENEDOR */
+.input-group{
+    position: relative;
+}
+
+/* INPUT */
+.input-group input{
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+}
+
+/* ICONO */
+.icono-validacion{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/* ESTADOS */
+.input-error{
+    border: 1px solid #e74c3c !important;
+}
+
+.input-ok{
+    border: 1px solid #2ecc71 !important;
+}
+
+/* ICONOS */
+.input-error + .icono-validacion::before{
+    content: "✖";
+    color: #e74c3c;
+}
+
+.input-ok + .icono-validacion::before{
+    content: "✔";
+    color: #2ecc71;
+}
+
+.footerCarrito {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    background: #fff;
+}
