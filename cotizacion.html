@@ -13,26 +13,40 @@
 <!-- HEADER -->
 <header>
 <nav>
-<div class="logo">
-    <img src="img/logo labsupply.png" alt="Lab Supply">
-</div>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="productos.html">Productos</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="descargas.html">Descargas</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-<li>
-<a href="cotizacion.html" class="link-cotizacion">
-    <span>Cotización</span>
-    <div class="icono-cotizacion">
-        <i class="fa-solid fa-clipboard-check"></i>
-        <i class="fa-solid fa-calculator"></i>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
     </div>
-    <span id="contadorCotizacion">0</span>
-</a>
-</li>
-</ul>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="descargas.html">Descargas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
 </nav>
 </header>
 
@@ -64,7 +78,7 @@
                         <th>Marca</th>
                         <th>Categoría</th>
                         <th>Cantidad</th>
-                        <th>Acción</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody id="listaCotizacion"></tbody>
@@ -117,7 +131,7 @@
     <!-- SECCIÓN DATOS DEL CLIENTE -->
     <section class="seccionCliente card">
         <h2>Datos del solicitante</h2>
-
+        <h5>¡ Llenar todos los campos para habilitar botones !</h5>
         <div class="form-cotizacion">
             <input type="text" id="nombreCliente" placeholder="Nombre completo">
             <input type="text" id="empresaCliente" placeholder="Empresa">
