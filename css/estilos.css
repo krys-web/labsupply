@@ -15,11 +15,18 @@ line-height:1.6;
 
 /* HEADER */
 
-header{
-background:#010c4b;
-color:white;
-padding:20px;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
+header.scrolled nav {
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+}
+
 
 header h1{
 text-align:center;
@@ -27,49 +34,53 @@ text-align:center;
 
 /* MENU */
 
-nav{
+nav {
+    position: relative;
+    overflow: visible;
 
-display:flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-align-items:center;
+    height: 75px;
+    padding: 0 30px;
 
-justify-content:space-between;
+    background: linear-gradient(
+        to bottom,
+        rgba(200, 210, 220, 0.95) 0%,   /* 🔵 gris más oscuro */
+        rgba(220, 225, 230, 0.95) 60%,  /* transición */
+        rgba(235, 238, 242, 0.85) 100%  /* 🌫️ más claro */
+    );
 
-max-width:1200px;
+    backdrop-filter: blur(6px);
 
-margin:auto;
-
-padding:15px 20px;
-
+    transition: all 0.3s ease;
 }
 
 
+
 /* LOGO */
+.logo {
+    position: relative;
+    z-index: 2;
+}
 
-.logo img{
+.logo img {
+    height: 85px;
+    transform: translateY(10px);
 
-height:90px;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
 
-display:block;
-
+    transition: none; /* quita animación */
 }
 
 /* Barra de navegacion menu */
 
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:25px;
-
-align-items:center;
-
-margin:0;
-
-padding:0;
-
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 /* Links */
@@ -78,30 +89,19 @@ nav ul li{
 margin:0 15px;
 }
 
-nav ul li a{
-color:rgb(255, 255, 255);
-text-decoration:none;
-font-weight:bold;
-padding:10px;
-display:block;
+nav ul li a {
+    color: #0a3d62; /* 🔵 azul oscuro elegante */
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
 }
 
-nav ul li a{
-
-text-decoration:none;
-
-color:#fdfdfd;
-
-font-weight:500;
-
-transition:0.3s;
-
-}
-
-nav ul li a:hover{
-
-color:#c5f713;
-
+/* hover elegante */
+nav ul li a:hover {
+    color: #3fa9f5;
+    transform: translateY(-1px);
 }
 
 /* SECCIONES */
@@ -1424,6 +1424,7 @@ background-position:center;
 text-align:center;
 padding:140px 20px;
 color:white;
+margin-top: 40px;
 
 }
 
@@ -2130,16 +2131,30 @@ flex-direction:column !important;
 .link-cotizacion {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+
+    background: rgba(10, 61, 98, 0.08);
+    padding: 6px 10px;
+    border: 1px solid rgba(10, 61, 98, 0.15);
+
+    position: relative;
+}
+
+.link-cotizacion:hover {
+    background: rgba(63, 169, 245, 0.15);
 }
 
 /* Diseño icono contador */
 #contadorCotizacion {
-    background: rgb(27, 126, 3);
+    background: red;
     color: white;
-    font-size: 12px;
+    font-size: 11px;
     padding: 2px 6px;
-    border-radius: 20%;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -5px;
+    right: -8px;
 }
 
 /* ESTILO FLOTANTE MENSAJE CUANDO SE AÑADE UN PRODUCTO */
@@ -2324,6 +2339,7 @@ flex-direction:column !important;
 .formularioCorreo{
     display: flex;
     flex-direction: column;
+    width: 450px;
     gap: 12px;
 }
 
@@ -2447,4 +2463,76 @@ input::placeholder{
     border-top: 1px solid #eee;
     padding-top: 10px;
     background: #fff;
+}
+
+/* =========================
+   HAMBURGUESA
+========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    /* mostrar hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* ocultar menú */
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        width: 100%;
+        flex-direction: column;
+
+        background: rgba(0, 123, 255, 0.95);
+        backdrop-filter: blur(8px);
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: all 0.3s ease;
+    }
+
+    /* menú abierto */
+    nav ul.active {
+        max-height: 500px;
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* logo ajustado en móvil */
+    .logo img {
+        height: 70px;
+        transform: translateY(8px);
+    }
+
+        header.scrolled nav {
+        height: 55px;
+    }
+
+        header.scrolled .logo img {
+        height: 45px;
+    }
 }
