@@ -294,6 +294,42 @@ border-color:#0f3d73;
 
 /* ===== CATALOGO PRODUCTOS ===== */
 
+/* =========================
+   BOTON CATALOGO PRO
+========================= */
+
+.btn-catalogo {
+    display: inline-block;
+    padding: 12px 28px;
+
+    background: linear-gradient(135deg, #ffd600, #ffb300);
+    color: #0a2a66;
+
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.btn-catalogo:hover {
+    background: linear-gradient(135deg, #ffea00, #ffc107);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* CLICK */
+.btn-catalogo:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -1410,35 +1446,102 @@ color:white;
 
 /* HERO */
 
-.hero{
-    
-background-image:linear-gradient(
-rgba(15,61,115,0.8),
-rgba(15,61,115,0.8)
-),
-url("../img/laboratorio-hero.jpg");
+/* =========================
+   HERO COMPACTO + REDONDEADO
+========================= */
 
-background-size:cover;
-background-position:center;
+/* =========================
+   HERO CON IMAGEN + OVERLAY AZUL
+========================= */
 
-text-align:center;
-padding:140px 20px;
-color:white;
-margin-top: 40px;
+.hero {
+    position: relative;
 
+    width: 95%;
+    margin: 20px auto;
+
+    padding: 50px 20px;
+    min-height: 35vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    overflow: hidden; /* 👈 importante para respetar bordes redondeados */
+
+    background: url('../img/laboratorio-hero.jpg') center/cover no-repeat;
 }
 
-.hero h2{
-font-size:42px;
-margin-bottom:20px;
+/* CAPA AZUL ENCIMA */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(2px);
+
+    background: rgba(10, 42, 102, 0.7); /* azul con transparencia */
+
+    z-index: 1;
 }
 
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
+/* CONTENIDO POR ENCIMA */
+.hero .contenedor {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white; /* importante para contraste */
+}
+
+/* tipografía más compacta */
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   ANIMACIÓN HERO
+========================= */
+
+.hero h1,
+.hero h2,
+.hero p,
+.hero .btn {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* cuando aparece */
+.hero.visible h1,
+.hero.visible h2,
+.hero.visible p,
+.hero.visible .btn {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* delays progresivos */
+.hero.visible h2 {
+    transition-delay: 0.2s;
+}
+
+.hero.visible p {
+    transition-delay: 0.4s;
+}
+
+.hero.visible .btn {
+    transition-delay: 0.6s;
 }
 
 
@@ -2536,3 +2639,228 @@ input::placeholder{
         height: 45px;
     }
 }
+
+/* =========================
+   MISION - VISION
+========================= */
+
+.mision-vision {
+    padding: 60px 20px;
+    background: #f5f9ff;
+    overflow: hidden;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-mv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+/* LADO IZQUIERDO */
+.mv-textos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.card h3 {
+    color: #0a2a66;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.mv-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.mv-imagen img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+}
+
+/* TEXTO GENERAL */
+.mv-general {
+    max-width: 900px;
+    margin: 50px auto 0;
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   ANIMACIONES SCROLL
+========================= */
+
+/* estado inicial */
+.mision-vision .mv-mision {
+    transform: translateX(-80px);
+    opacity: 0;
+}
+
+.mision-vision .mv-vision {
+    transform: translateX(-120px);
+    opacity: 0;
+}
+
+.mision-vision .mv-imagen {
+    transform: translateX(80px);
+    opacity: 0;
+}
+
+.mision-vision .mv-general {
+    transform: translateY(60px);
+    opacity: 0;
+}
+
+/* cuando aparece */
+.mision-vision.visible .mv-mision,
+.mision-vision.visible .mv-vision,
+.mision-vision.visible .mv-imagen,
+.mision-vision.visible .mv-general {
+    transform: translate(0,0);
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+/* delay elegante */
+.mision-vision.visible .mv-vision {
+    transition-delay: 0.2s;
+}
+
+.mision-vision.visible .mv-imagen {
+    transition-delay: 0.3s;
+}
+
+.mision-vision.visible .mv-general {
+    transition-delay: 0.4s;
+}
+
+/* JUSTIFICAR TEXTOS */
+.mv-mision p,
+.mv-vision p,
+.mv-general p {
+    text-align: justify;
+    line-height: 1.6;
+    hyphens: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .contenedor-mv {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mv-imagen img {
+        max-width: 100%;
+    }
+}
+
+/* =========================
+   SECCION MARCAS
+========================= */
+
+.marcas {
+    padding: 15px 20px;
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.marcas h2 {
+    margin-bottom: 30px;
+    color: #0a2a66;
+}
+
+/* CONTENEDOR CARRUSEL */
+.carrusel-marcas {
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK (movimiento) */
+/* TRACK */
+.track {
+    display: flex;
+    width: max-content;
+    gap: 60px;
+
+    animation: scrollMarcas 40s linear infinite; /* 👈 MÁS LENTO */
+}
+
+/* LOGOS */
+.track img {
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    filter: grayscale(100%); /* 👈 blanco y negro */
+    opacity: 0.7;
+
+    transition: all 0.4s ease;
+}
+
+/* AL PASAR EL MOUSE */
+.track img:hover {
+    filter: grayscale(0%); /* 👈 vuelve a color */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ANIMACION INFINITA */
+
+@keyframes scrollMarcas {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* =========================
+   ANIMACION SCROLL REVERSIBLE
+========================= */
+
+.marcas {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.marcas.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* PAUSAR ANIMACIÓN AL HOVER */
+.carrusel-marcas:hover .track {
+    animation-play-state: paused;
+}
+
