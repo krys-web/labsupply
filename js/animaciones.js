@@ -1,78 +1,65 @@
-const elementos = document.querySelectorAll("section");
+// ======================================
+// ANIMACIONES SCROLL (REVERSIBLES)
+// ======================================
 
-function mostrarElementos(){
+const secciones = document.querySelectorAll(".animar");
 
-const trigger = window.innerHeight * 0.85;
+const observer = new IntersectionObserver((entries) => {
 
-elementos.forEach(el => {
+    entries.forEach(entry => {
 
-const top = el.getBoundingClientRect().top;
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        } else {
+            // 👇 REVERSIBLE (cuando sale de pantalla)
+            entry.target.classList.remove("visible");
+        }
 
-if(top < trigger){
+    });
 
-el.classList.add("visible");
-
-}
-
+}, {
+    threshold: 0.2
 });
 
-}
+// Aplicar observer
+secciones.forEach(sec => observer.observe(sec));
 
-window.addEventListener("scroll", mostrarElementos);
 
-mostrarElementos();
+// ======================================
+// HEADER SCROLL EFECTO
+// ======================================
 
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
+
+    if (!header) return;
+
     header.classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// ==========================
+
+// ======================================
 // MENU HAMBURGUESA
-// ==========================
+// ======================================
 
 const menuToggle = document.getElementById("menuToggle");
 const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-});
+if(menuToggle && menu){
 
-// CERRAR MENU AL HACER CLICK.
-
-const links = document.querySelectorAll("#menu a");
-
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("active");
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
     });
-});
 
+    // Cerrar menú al hacer click en enlaces
+    const links = document.querySelectorAll("#menu a");
 
-// ANIMACION SCROLL PARA MISION Y VISION
-
-const secciones = document.querySelectorAll('.animar');
-
-const mostrarSeccion = () => {
-    const trigger = window.innerHeight * 0.85;
-
-    secciones.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        const bottom = sec.getBoundingClientRect().bottom;
-
-        // Si está dentro de la pantalla
-        if (top < trigger && bottom > 0) {
-            sec.classList.add('visible');
-        } else {
-            // 👇 CLAVE: quitar la clase cuando sale
-            sec.classList.remove('visible');
-        }
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("active");
+        });
     });
-};
 
-window.addEventListener('scroll', mostrarSeccion);
-window.addEventListener('load', mostrarSeccion);
-
-const trigger = window.innerHeight * 0.75;
+}
 
 
