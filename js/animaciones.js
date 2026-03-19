@@ -47,3 +47,32 @@ links.forEach(link => {
         menu.classList.remove("active");
     });
 });
+
+
+// ANIMACION SCROLL PARA MISION Y VISION
+
+const secciones = document.querySelectorAll('.animar');
+
+const mostrarSeccion = () => {
+    const trigger = window.innerHeight * 0.85;
+
+    secciones.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        const bottom = sec.getBoundingClientRect().bottom;
+
+        // Si está dentro de la pantalla
+        if (top < trigger && bottom > 0) {
+            sec.classList.add('visible');
+        } else {
+            // 👇 CLAVE: quitar la clase cuando sale
+            sec.classList.remove('visible');
+        }
+    });
+};
+
+window.addEventListener('scroll', mostrarSeccion);
+window.addEventListener('load', mostrarSeccion);
+
+const trigger = window.innerHeight * 0.75;
+
+
