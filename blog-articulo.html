@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artículo</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="icon" href="img/icono.ico">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<!-- LAYOUT PRINCIPAL -->
+
+<main class="layoutBlog">
+    <article class="articulo" style="max-width: 900px; margin: 0 auto;">
+        <h1 id="titulo"></h1>
+        <div class="meta">
+            <span id="fecha"></span> · <span id="categoria"></span>
+        </div>
+        
+        <img id="imagen" src="" alt="" style="width:100%; border-radius:8px;">
+
+        <div id="contenido"></div>
+
+        <div class="seccion-final">
+            <h2>Conclusión</h2>
+            <p id="conclusion"></p>
+        </div>
+
+        <div class="cta">
+            <p>¿Necesitas equipos de laboratorio?</p>
+            <a href="contacto.html">Contáctanos</a>
+        </div>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong>
+            <a href="https://krys-web.github.io/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+<!-- BOTON WHATSAPP EXPANDIBLE -->
+
+<div class="whatsapp-float">
+
+    <!-- BOTONES SECUNDARIOS -->
+    <div class="whatsapp-opciones">
+
+        <!-- VENTAS -->
+        <a href="https://wa.me/593991793261?text=Hola,%20deseo%20información%20sobre%20productos"
+           target="_blank"
+           class="whatsapp-btn ventas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ventas</span>
+        </a>
+
+        <!-- SERVICIO TECNICO -->
+        <a href="https://wa.me/593992291059?text=Hola,%20necesito%20soporte%20técnico"
+           target="_blank"
+           class="whatsapp-btn soporte">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Servicio Técnico</span>
+        </a>
+
+    </div>
+
+    <!-- BOTON PRINCIPAL -->
+    <button class="whatsapp-main" id="btnWhatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+</div>
+
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- ANIMACION BOTON WHATSAPP -->
+ <script>
+const btn = document.getElementById("btnWhatsapp");
+const contenedor = document.querySelector(".whatsapp-float");
+
+btn.addEventListener("click", () => {
+    contenedor.classList.toggle("activo");
+});
+</script>
+
+<!-- EVITA QUE EL BOTON DE WHATSAPP INGRESE AL FOOTER-->
+ <script>
+window.addEventListener('scroll', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('.footer');
+    
+    // Calculamos la posición del footer respecto a la pantalla
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Si el borde superior del footer entra en la pantalla
+    if (footerRect.top < windowHeight) {
+        // Calculamos cuánto espacio ocupa el footer en pantalla
+        const desplazamiento = windowHeight - footerRect.top + 20; 
+        whatsappBtn.style.bottom = desplazamiento + 'px';
+    } else {
+        // Posición original cuando no hay footer visible
+        whatsappBtn.style.bottom = '20px';
+    }
+});
+</script>
+
+<!-- scripts -->
+<script src="js/blog-articulo.js"></script>
+<script src="js/carrito.js"></script>
+<script src="js/animaciones.js"></script>
+<script src="js/producto.js"></script>
+</body>
+</html>

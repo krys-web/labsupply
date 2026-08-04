@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotización de Productos</title>
+<meta name="description" content="Solicitud de cotización de productos de laboratorio">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="canonical" href="https://www.labsupply.com.ec/cotizacion.html" />
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="icon" href="img/icono.ico">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+
+<nav>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<!-- TITULO -->
+<section class="tituloPagina">
+<h2>Solicitud de Cotización</h2>
+<h3 id="numeroCotizacionVista"></h3>
+<p>Productos agregados a tu solicitud</p>
+</section>
+
+<!-- CONTENEDOR PRINCIPAL -->
+<section class="contenedorCotizacionGrid">
+
+    <!-- IZQUIERDA: TABLA PRINCIPAL -->
+    <div class="cotizacionPrincipal">
+
+        <!-- BUSCADOR -->
+        <div class="buscadorCotizacion">
+            <input type="text" id="buscarCotizacion" placeholder="Buscar producto...">
+        </div>
+
+        <!-- TABLA DE PRODUCTOS -->
+        <div class="tablaCotizacion">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th class="ocultar-movil"Imagen>Imagen</th>
+                        <th>Producto</th>
+                        <th class="ocultar-movil"Marca>Marca</th>
+                        <th class="ocultar-movil"Codigo>Código</th>
+                        <th>Cantidad</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="listaCotizacion"></tbody>
+            </table>
+
+            <!-- RESUMEN INFERIOR -->
+            <div class="resumenInferior">
+                <div class="contadorInferior">
+                    <span id="totalProductos">0</span> productos |
+                    <span id="totalItems">0</span> ítems
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DERECHA: VENTANA FLOTANTE (RESUMEN) -->
+    <aside class="carritoResumen card">
+        <h3>Resumen de cotización</h3>
+
+        <!-- Detalle de productos resumido -->
+        <div id="detalleCarrito" class="detalleCarrito">
+            <p>Sin productos</p>
+        </div>
+
+        <!-- Totales -->
+        <div class="resumenLinea">
+            Productos: <span id="resumenProductos">0</span>
+        </div>
+        <div class="resumenLinea">
+            Ítems: <span id="resumenItems">0</span>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="accionesCarrito">
+            <!--
+            <button id="btnCorreo" onclick="enviarCorreo()" class="btn btn-primary" disabled>
+                Enviar cotización por correo
+            </button>
+        -->
+            <button id="btnWhatsapp" onclick="enviarWhatsApp()" class="btn btn-success" disabled>
+                Enviar por WhatsApp
+            </button>
+            <button id="btnPDF" onclick="generarPDF()" class="btn btn-secondary" disabled>
+                Descargar PDF
+            </button>
+            <!--
+            <button onclick="copiarCotizacion()" class="btn btn-secondary">
+                Copiar N° Cotización
+            </button>-->
+            <button onclick="vaciarCotizacion()" class="btn btn-danger">
+                Nueva cotización
+            </button>
+        </div>
+    </aside>
+
+    <!-- SECCIÓN DATOS DEL CLIENTE -->
+    <section class="seccionCliente card">
+        <h2>Datos del solicitante</h2>
+        <h5>¡ Llenar todos los campos para habilitar botones !</h5>
+        <div class="form-cotizacion">
+            <input type="text" id="nombreCliente" placeholder="Nombre completo">
+            <input type="text" id="empresaCliente" placeholder="Empresa">
+            <input type="email" id="correoCliente" placeholder="Correo electrónico">
+            <input type="tel" id="telefonoCliente" placeholder="Teléfono">
+
+            <!-- Botón para borrar datos -->
+            <div class="accionesCliente">
+                <button onclick="borrarDatosCliente()" class="btn btn-danger">
+                    Borrar datos
+                </button>
+            </div>
+        </div>
+    </section>
+
+</section>
+
+<!-- TOAST -->
+<div id="toastContainer" class="toastContainer"></div>
+
+<!-- LIBRERÍAS -->
+ <!--
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){ emailjs.init("TU_PUBLIC_KEY"); })();
+</script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- JS -->
+<script src="js/cotizacion.js"></script>
+<script src="js/carrito.js"></script>
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong>
+            <a href="https://www.krysweb.com/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+<!-- BOTON WHATSAPP EXPANDIBLE -->
+
+<div class="whatsapp-float">
+
+    <!-- BOTONES SECUNDARIOS -->
+    <div class="whatsapp-opciones">
+
+        <!-- VENTAS -->
+        <a href="https://wa.me/593991793261?text=Hola,%20deseo%20información%20sobre%20productos"
+           target="_blank"
+           class="whatsapp-btn ventas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ventas</span>
+        </a>
+
+        <!-- SERVICIO TECNICO -->
+        <a href="https://wa.me/593992291059?text=Hola,%20necesito%20soporte%20técnico"
+           target="_blank"
+           class="whatsapp-btn soporte">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Servicio Técnico</span>
+        </a>
+
+    </div>
+
+    <!-- BOTON PRINCIPAL -->
+    <button class="whatsapp-main" id="btnWhatsappFlotante">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+</div>
+
+<!-- ANIMACION BOTON WHATSAPP -->
+<script>
+const btnFlotante = document.getElementById("btnWhatsappFlotante");
+const contenedor = document.querySelector(".whatsapp-float");
+
+btnFlotante.addEventListener("click", () => {
+    contenedor.classList.toggle("activo");
+});
+</script>
+
+<!-- EVITA QUE EL BOTON DE WHATSAPP INGRESE AL FOOTER-->
+ <script>
+window.addEventListener('scroll', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('.footer');
+    
+    // Calculamos la posición del footer respecto a la pantalla
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Si el borde superior del footer entra en la pantalla
+    if (footerRect.top < windowHeight) {
+        // Calculamos cuánto espacio ocupa el footer en pantalla
+        const desplazamiento = windowHeight - footerRect.top + 20; 
+        whatsappBtn.style.bottom = desplazamiento + 'px';
+    } else {
+        // Posición original cuando no hay footer visible
+        whatsappBtn.style.bottom = '20px';
+    }
+});
+</script>
+
+
+</body>
+</html>

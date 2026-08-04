@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blog de Laboratorio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="description" content="Artículos y guías sobre equipos y productos de laboratorio">
+<link rel="canonical" href="https://www.labsupply.com.ec/blog.html" />
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="icon" href="img/icono.ico">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<!-- TITULO PAGINA -->
+
+<section class="tituloPagina">
+
+<h2>Blog de Laboratorio</h2>
+
+<p>
+Artículos, guías y novedades sobre productos de laboratorio
+</p>
+
+</section>
+
+<!-- BUSCADOR -->
+
+<section class="buscadorContainer">
+    <div class="barraBusqueda">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="inputBusqueda" placeholder="Buscar artículos...">
+    </div>
+</section>
+
+<section class="blogContainer">
+    <div class="gridBlog">
+        </div>
+    
+    <div id="controlesPaginacion" class="paginacion"></div>
+</section>
+
+<!-- BLOG DINÁMICO -->
+
+<section class="blogContainer">
+
+    <div class="gridBlog">
+        <!-- LOS ARTÍCULOS SE CARGAN DESDE blog.js -->
+    </div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong>
+            <a href="https://www.krysweb.com/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+<!-- JS -->
+
+<script src="js/carrito.js"></script>
+<script src="js/animaciones.js"></script>
+<script src="js/blog.js"></script>
+
+<!-- BOTON WHATSAPP EXPANDIBLE -->
+
+<div class="whatsapp-float">
+
+    <!-- BOTONES SECUNDARIOS -->
+    <div class="whatsapp-opciones">
+
+        <!-- VENTAS -->
+        <a href="https://wa.me/593991793261?text=Hola,%20deseo%20información%20sobre%20productos"
+           target="_blank"
+           class="whatsapp-btn ventas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ventas</span>
+        </a>
+
+        <!-- SERVICIO TECNICO -->
+        <a href="https://wa.me/593992291059?text=Hola,%20necesito%20soporte%20técnico"
+           target="_blank"
+           class="whatsapp-btn soporte">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Servicio Técnico</span>
+        </a>
+
+    </div>
+
+    <!-- BOTON PRINCIPAL -->
+    <button class="whatsapp-main" id="btnWhatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+</div>
+
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- ANIMACION BOTON WHATSAPP -->
+ <script>
+const btn = document.getElementById("btnWhatsapp");
+const contenedor = document.querySelector(".whatsapp-float");
+
+btn.addEventListener("click", () => {
+    contenedor.classList.toggle("activo");
+});
+</script>
+
+<!-- EVITA QUE EL BOTON DE WHATSAPP INGRESE AL FOOTER-->
+ <script>
+window.addEventListener('scroll', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('.footer');
+    
+    // Calculamos la posición del footer respecto a la pantalla
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Si el borde superior del footer entra en la pantalla
+    if (footerRect.top < windowHeight) {
+        // Calculamos cuánto espacio ocupa el footer en pantalla
+        const desplazamiento = windowHeight - footerRect.top + 20; 
+        whatsappBtn.style.bottom = desplazamiento + 'px';
+    } else {
+        // Posición original cuando no hay footer visible
+        whatsappBtn.style.bottom = '20px';
+    }
+});
+</script>
+
+</body>
+
+</html>

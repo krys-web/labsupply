@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto | LAB SUPPLY</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="description" content="Contacto para solicitar información o cotizaciones de productos de laboratorio">
+<link rel="canonical" href="https://www.labsupply.com.ec/contacto.html" />
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="icon" href="img/icono.ico">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+<!-- TITULO -->
+
+<section class="tituloPagina">
+
+<h2>Contáctanos</h2>
+
+<p>Solicita información o cotizaciones de productos de laboratorio</p>
+
+</section>
+
+
+<!-- SECCION CONTACTO -->
+
+<section class="contactoGrid">
+
+<!-- DATOS -->
+
+<div class="datosContacto">
+
+<h3>Información de contacto</h3>
+
+<p><strong>Empresa:</strong> LAB SUPPLY</p>
+
+<p><strong>Teléfono:</strong> +593 4 6010868</p>
+
+<p><strong>Celular / WhatsApp:</strong> +593 99 179 3261</p>
+
+<p><strong>Email:</strong>marketing@labsupply.com.ec</p>
+
+<p><strong>Dirección:</strong> Guayaquil, Ecuador</p>
+
+<div class="mapa">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0242705358237!2d-79.9039102!3d-2.1443886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d8d32d31e81%3A0xfd569e0a9786b478!2sLABSUPPLY%20CIA%20LTDA!5e0!3m2!1ses-419!2sec!4v1773962785938!5m2!1ses-419!2sec" 
+width="600" height="450" style="border:0;" allowfullscreen="" 
+loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+</div>
+
+
+<!-- FORMULARIO -->
+
+<div class="formularioContacto">
+
+<h3>Enviar mensaje</h3>
+
+<form action="enviar.php" method="POST">
+    <input type="text" name="nombre" id="nombreContacto" placeholder="Nombre" required>
+    <input type="email" name="correo" id="correoContacto" placeholder="Correo" required>
+    <input type="text" name="telefono" id="telefonoContacto" placeholder="Teléfono">
+    <textarea name="mensaje" id="mensajeContacto" placeholder="Mensaje" required></textarea>
+    
+    <button type="button" id="btnEnviarContacto">Enviar Mensaje</button>
+</form>
+
+</div>
+
+</section>
+
+
+<!-- EMAIL -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- JS -->
+
+<script src="js/carrito.js"></script>
+<script src="js/animaciones.js"></script>
+<script src="js/contacto.js"></script>
+
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong>
+            <a href="https://www.krysweb.com/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+<!-- BOTON WHATSAPP EXPANDIBLE -->
+
+<div class="whatsapp-float">
+
+    <!-- BOTONES SECUNDARIOS -->
+    <div class="whatsapp-opciones">
+
+        <!-- VENTAS -->
+        <a href="https://wa.me/593991793261?text=Hola,%20deseo%20información%20sobre%20productos"
+           target="_blank"
+           class="whatsapp-btn ventas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ventas</span>
+        </a>
+
+        <!-- SERVICIO TECNICO -->
+        <a href="https://wa.me/593992291059?text=Hola,%20necesito%20soporte%20técnico"
+           target="_blank"
+           class="whatsapp-btn soporte">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Servicio Técnico</span>
+        </a>
+
+    </div>
+
+    <!-- BOTON PRINCIPAL -->
+    <button class="whatsapp-main" id="btnWhatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+</div>
+
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- ANIMACION BOTON WHATSAPP -->
+ <script>
+const btn = document.getElementById("btnWhatsapp");
+const contenedor = document.querySelector(".whatsapp-float");
+
+btn.addEventListener("click", () => {
+    contenedor.classList.toggle("activo");
+});
+</script>
+
+<!-- EVITA QUE EL BOTON DE WHATSAPP INGRESE AL FOOTER-->
+ <script>
+window.addEventListener('scroll', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('.footer');
+    
+    // Calculamos la posición del footer respecto a la pantalla
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Si el borde superior del footer entra en la pantalla
+    if (footerRect.top < windowHeight) {
+        // Calculamos cuánto espacio ocupa el footer en pantalla
+        const desplazamiento = windowHeight - footerRect.top + 20; 
+        whatsappBtn.style.bottom = desplazamiento + 'px';
+    } else {
+        // Posición original cuando no hay footer visible
+        whatsappBtn.style.bottom = '20px';
+    }
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title id="tituloProducto">Detalle del Producto</title>
+
+<meta name="description" id="metaDescripcion" content="Detalle del producto">
+
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="icon" href="img/icono.ico">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<!-- DETALLE PRODUCTO -->
+
+<section class="detalleProducto">
+
+<div class="productoContainer">
+
+<!-- IMAGEN -->
+
+<div class="productoImagen">
+
+<img id="imagenProducto" src="" alt="Producto laboratorio">
+
+</div>
+
+<!-- INFORMACION -->
+
+<div class="productoInfo">
+
+<h2 id="nombreProducto"></h2>
+
+<p class="categoria">
+<strong>Categoría:</strong>
+<span id="categoriaProducto"></span>
+</p>
+
+<p class="marca">
+<strong>Marca:</strong>
+<span id="marcaProducto"></span>
+</p>
+
+<p class="descripcion" id="descripcionProducto"></p>
+
+<div class="accionesProducto">
+
+<a id="modalFicha" target="_blank">
+    <i class="fas fa-file-pdf"></i>
+    Descargar ficha técnica
+</a>
+
+<button id="btnCotizar">
+Cotizar
+</button>
+
+</div>
+
+<!-- SEO KEYWORDS (ocultas para buscadores) -->
+
+<div class="keywords" style="display:none">
+
+<span id="keywordsProducto"></span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTOS RELACIONADOS -->
+
+<section class="relacionados">
+
+<h2>Productos relacionados</h2>
+
+<div id="productosRelacionados" class="gridProductos">
+
+</div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong>
+            <a href="https://www.krysweb.com/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+
+<!-- BOTON WHATSAPP EXPANDIBLE -->
+
+<div class="whatsapp-float">
+
+    <!-- BOTONES SECUNDARIOS -->
+    <div class="whatsapp-opciones">
+
+        <!-- VENTAS -->
+        <a href="https://wa.me/593991793261?text=Hola,%20deseo%20información%20sobre%20productos"
+           target="_blank"
+           class="whatsapp-btn ventas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ventas</span>
+        </a>
+
+        <!-- SERVICIO TECNICO -->
+        <a href="https://wa.me/593992291059?text=Hola,%20necesito%20soporte%20técnico"
+           target="_blank"
+           class="whatsapp-btn soporte">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Servicio Técnico</span>
+        </a>
+
+    </div>
+
+    <!-- BOTON PRINCIPAL -->
+    <button class="whatsapp-main" id="btnWhatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+</div>
+
+
+<!-- Ventana Modal -->
+
+<div id="modalProducto" class="modal">
+
+<div class="modal-contenido">
+
+<span class="cerrar" onclick="cerrarProducto()">×</span>
+
+<div class="modal-grid">
+
+<!-- IMAGEN -->
+
+<div class="modal-imagen">
+
+<img id="modalImagen">
+
+<h2 id="modalNombre"></h2>
+
+<p id="modalMarca"></p>
+
+</div>
+
+<!-- CONTENIDO -->
+
+<div class="modal-info">
+
+<ul class="tabs">
+
+<li onclick="mostrarTab('detalle')" class="tab-activo">
+Detalle
+</li>
+
+<li onclick="mostrarTab('especificaciones')">
+Especificaciones
+</li>
+
+<li onclick="mostrarTab('categoria')">
+Categoría
+</li>
+
+</ul>
+
+<div class="tab-contenido">
+
+<div id="detalle" class="tab">
+<p id="modalDescripcion"></p>
+</div>
+
+<div id="especificaciones" class="tab">
+<p id="modalEspecificaciones"></p>
+</div>
+
+<div id="categoria" class="tab">
+<p id="modalCategoria"></p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- ANIMACION BOTON WHATSAPP -->
+ <script>
+const btn = document.getElementById("btnWhatsapp");
+const contenedor = document.querySelector(".whatsapp-float");
+
+btn.addEventListener("click", () => {
+    contenedor.classList.toggle("activo");
+});
+</script>
+
+<!-- EVITA QUE EL BOTON DE WHATSAPP INGRESE AL FOOTER-->
+ <script>
+window.addEventListener('scroll', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('.footer');
+    
+    // Calculamos la posición del footer respecto a la pantalla
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Si el borde superior del footer entra en la pantalla
+    if (footerRect.top < windowHeight) {
+        // Calculamos cuánto espacio ocupa el footer en pantalla
+        const desplazamiento = windowHeight - footerRect.top + 20; 
+        whatsappBtn.style.bottom = desplazamiento + 'px';
+    } else {
+        // Posición original cuando no hay footer visible
+        whatsappBtn.style.bottom = '20px';
+    }
+});
+</script>
+
+<!-- JS -->
+
+<script src="js/carrito.js"></script>
+
+<script src="js/producto.js"></script>
+
+<script src="js/catalogo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Administrador de Productos</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="icon" href="img/icono.ico">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<h1>CARGA DE DATOS SECCION PRODUCTOS - LAB SUPPLY</h1>
+</div>
+
+
+</header>
+
+<h2>Panel de Administración de Productos</h2>
+
+<!-- BUSCADOR -->
+
+<input
+type="text"
+id="buscarAdmin"
+placeholder="Buscar producto..."
+>
+
+<!-- FORMULARIO -->
+
+<form id="formProducto">
+
+<input type="hidden" id="productoIndex">
+
+<input type="text" id="nombre" placeholder="Nombre" required>
+
+<input type="text" id="categoria" placeholder="Categoria" required>
+
+<input type="text" id="marca" placeholder="Marca">
+
+<input type="text" id="keywords" placeholder="Keywords SEO">
+
+<textarea id="descripcion" placeholder="Descripción"></textarea>
+
+<input type="file" id="imagen">
+
+<input type="text" id="pdf" placeholder="PDF">
+
+<button type="submit">
+Guardar producto
+</button>
+
+</form>
+
+<hr>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nombre</th>
+<th>Marca</th>
+<th>Categoría</th>
+<th>Acciones</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaAdmin"></tbody>
+
+</table>
+
+<button onclick="exportarJSON()">
+Exportar productos.json
+</button>
+
+<script src="js/carrito.js"></script>
+<script src="js/admin.js"></script>
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong> | 
+            +593 98 299 6860 | 
+            krysweb.uio@gmail.com
+            <a href="https://krys-web.github.io/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+</body>
+
+</html>

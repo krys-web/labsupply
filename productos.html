@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Productos - LAB SUPPLY</title>
+<link rel="canonical" href="https://www.labsupply.com.ec/productos.html" />
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="icon" href="img/icono.ico">
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+    <div class="logo">
+        <img src="img/logo labsupply.png">
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA -->
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- MENÚ -->
+    <ul id="menu">
+
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+        <li>
+            <a href="cotizacion.html" class="link-cotizacion">
+                <span>Cotización</span>
+
+                <div class="icono-cotizacion">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <span id="contadorCotizacion">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<section>
+
+<h2>Catálogo de productos</h2>
+
+<div class="buscador-container">
+    <input type="text" id="buscador" placeholder="Buscar productos...">
+    <i class="fa-solid fa-xmark" id="clearSearch"></i>
+</div>
+
+<select id="filtroCategoria">
+<option value="">Todas las categorías</option>
+<option value="Equipos">Equipos e Instrumentos</option>
+<option value="Estándares y material de referencia">Estándares y material de referencia</option>
+<option value="Filtración">Filtración</option>
+<option value="Insumos">Insumos</option>
+<option value="Medios de cultivo">Medio de cultivo</option>
+<option value="Reactivos">Reactivos</option>
+</select>
+
+<div id="productos" class="gridProductos"></div>
+
+<div id="paginacion"></div>
+
+</section>
+
+<!-- ================= MODAL PRODUCTO ================= -->
+
+<div id="modalProducto" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarProducto()">×</span>
+        <div class="modal-grid">
+            <div class="modal-imagen">
+                <img id="modalImagen">
+                <h2 id="modalNombre"></h2>
+                <p id="modalMarca"></p>
+                <div class="acciones-producto-modal">
+                    <button id="btnFichaModal" class="btn-ficha-modal">
+                        <i class="fa-solid fa-file-pdf"></i> Ficha
+                    </button>
+                    <button id="btnCotizarModal" class="btn-cotizar-modal">
+                        <i class="fa-solid fa-cart-plus"></i> Cotizar
+                    </button>
+                </div>
+            </div>
+            <div class="modal-info">
+                <ul class="tabs">
+                    <li onclick="mostrarTab('detalle')" id="tab-detalle" class="tab-activo">Detalle</li>
+                    <li onclick="mostrarTab('especificaciones')" id="tab-especificaciones">Especificaciones</li>
+                    <li onclick="mostrarTab('categoria')" id="tab-categoria">Categoría</li>
+                </ul>
+                <div class="tab-contenido-principal">
+                    <div id="detalle" class="tab-pestaña"><p id="modalDescripcion"></p></div>
+                    <div id="especificaciones" class="tab-pestaña" style="display:none;">
+                        <table class="tabla-especificaciones">
+                            <tr><td><strong>Código:</strong></td><td id="specCodigo"></td></tr>
+                            <tr><td><strong>Nombre:</strong></td><td id="specNombre"></td></tr>
+                            <tr><td><strong>Marca:</strong></td><td id="specMarca"></td></tr>
+                            <tr><td><strong>Categoría:</strong></td><td id="specCategoria"></td></tr>
+                        </table>
+                    </div>
+                    <div id="categoria" class="tab-pestaña" style="display:none;">
+                        <p>Pertenece a: <strong id="modalCategoria"></strong></p>
+                    </div>
+                </div>
+                <div class="relacionados-wrapper">
+                    <h3>Productos relacionados</h3>
+                    <div id="modalRelacionados" class="gridRelacionados"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOTON WHATSAPP EXPANDIBLE -->
+
+<div class="whatsapp-float">
+
+    <!-- BOTONES SECUNDARIOS -->
+    <div class="whatsapp-opciones">
+
+        <!-- VENTAS -->
+        <a href="https://wa.me/593991793261?text=Hola,%20deseo%20información%20sobre%20productos"
+           target="_blank"
+           class="whatsapp-btn ventas">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Ventas</span>
+        </a>
+
+        <!-- SERVICIO TECNICO -->
+        <a href="https://wa.me/593992291059?text=Hola,%20necesito%20soporte%20técnico"
+           target="_blank"
+           class="whatsapp-btn soporte">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Servicio Técnico</span>
+        </a>
+
+    </div>
+
+    <!-- BOTON PRINCIPAL -->
+    <button class="whatsapp-main" id="btnWhatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+</div>
+
+
+<footer class="footer">
+    <div class="footer-contenedor">
+
+        <p class="footer-left">
+            Lab Supply © 2026 | Todos los derechos reservados
+        </p>
+
+        <p class="footer-right">
+            <img src="img/logo-krysweb.png" alt="KrysWeb">
+            Diseñado por:<strong>KRYSWEB</strong>
+            <a href="https://www.krysweb.com/" target="_blank">Visitar Sitio</a>
+        </p>
+
+    </div>
+</footer>
+
+<!-- CONTENEDOR DE ALERTAS -->
+<div id="toastContainer" class="toast-container"></div>
+
+<!-- ANIMACION BOTON WHATSAPP -->
+ <script>
+const btn = document.getElementById("btnWhatsapp");
+const contenedor = document.querySelector(".whatsapp-float");
+
+btn.addEventListener("click", () => {
+    contenedor.classList.toggle("activo");
+});
+</script>
+
+<!-- EVITA QUE EL BOTON DE WHATSAPP INGRESE AL FOOTER-->
+ <script>
+window.addEventListener('scroll', function() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('.footer');
+    const paginacion = document.getElementById('paginacion');
+    
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (footerRect.top < windowHeight) {
+        // Si el footer es visible, se posiciona sobre él
+        const desplazamiento = windowHeight - footerRect.top + 20; 
+        whatsappBtn.style.bottom = desplazamiento + 'px';
+    } else {
+        // En móviles, si la paginación está presente, subimos el botón un poco más
+        // para que no estorbe a los dedos al cambiar de página
+        if (window.innerWidth < 768) {
+            whatsappBtn.style.bottom = '90px'; // Lo subimos lo suficiente para liberar la paginación
+        } else {
+            whatsappBtn.style.bottom = '20px';
+        }
+    }
+});
+</script>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="js/carrito.js"></script>
+
+<script src="js/animaciones.js"></script>
+
+<script src="js/producto.js"></script>
+
+<script src="js/catalogo.js"></script>
+
+</body>
+
+</html>
