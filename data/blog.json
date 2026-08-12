@@ -875,6 +875,181 @@
         "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
       }
     ]
+  },
+ {
+  "id": 6,
+  "slug": "cabina, extractora, gases, acidos, alcalinos, biobase",
+  "titulo": "CABINA EXTRACTORA DE GASES ÁCIDOS Y ALCALINOS BIOBASE FH1200P",
+  "resumen": "Cabina extractora de gases BIOBASE FH1200(P), diseñada para ayudar a evacuar vapores, gases y olores generados durante procesos de laboratorio. Fabricada en PP resistente a ácidos, álcalis y corrosión, cuenta con ventana frontal de vidrio templado, soplador centrífugo incorporado, velocidad ajustable, iluminación LED, ducto de extracción y mesa de trabajo resistente a químicos",
+  "fecha": "2026-08-12",
+  "categoria": "Equipos",
+  "imagen": "img/blog/articulo6.jpg",
+  "lectura": "5 min",
+  "metaDescripcion": "Recomendada para laboratorios químicos, control de calidad, universidades, industrias, áreas de análisis y procesos donde se requiera extracción de vapores, olores o gases generados por sustancias químicas compatibles con el material del equipo.",
+  "keywords": "equipos, Biobase, cabina, extractora, gases, alcalinos, Guayaquil, Labsupply, Ecuador",
+    "contenido": [
+      {
+        "tipo": "titulo",
+        "texto": "Protección:"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Este equipo protege principalmente al operador y al ambiente de trabajo, ayudando a extraer vapores y gases hacia el sistema de ducto. No está diseñado para proteger el producto o muestra ni para crear un ambiente estéril."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "No recomendable para:"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "No se recomienda para trabajos que requieran protección microbiológica, ambiente estéril, manipulación de agentes infecciosos o protección del producto. Tampoco debe utilizarse con sustancias o procesos que superen la compatibilidad química del PP, la resina fenólica o los parámetros indicados por el fabricante."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Especificaciones Técnicas"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Modelo:</strong> FH1200(P)",
+          "<strong>Tipo de equipo:</strong> Cabina extractora de gases / campana de extracción",
+          "<strong>Tamaño externo:</strong> 1247 × 800 × 2450 mm",
+          "<strong>Tamaño interno:</strong> 987 × 560 × 700 mm",
+          "<strong>Altura de superficie de trabajo:</strong> 820 mm",
+          "<strong>Apertura máxima:</strong> 740 mm",
+          "<strong>Velocidad de aire:</strong> 0,3 ~ 0,8 m/s",
+          "<strong>Nivel de ruido:</strong> ≤ 68 dB",
+          "<strong>Lámpara LED:</strong> 12 W × 2",
+          "<strong>Soplador:</strong> Soplador centrífugo de PP incorporado, velocidad ajustable",
+          "<strong>Ventana frontal:</strong> Manual, vidrio templado de 5 mm, resistente a ácidos y álcalis, altura ajustable",
+          "<strong>Fuente de alimentación:</strong> AC 220 V, 50/60 Hz",
+          "<strong>Consumo:</strong> 400 W",
+          "<strong>Material del cuerpo principal:</strong> PP blanco porcelana de 8 mm, resistente a ácidos fuertes, álcalis y corrosión.",
+          "<strong>Mesa de trabajo:</strong>Resina fenólica resistente a químicos"
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Descripción:"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La campana extractora se puede utilizar para la operación de factores de infección potencialmente peligrosos o desconocidos, así como para el experimento de ácidos fuertes, álcalis fuertes, corrosivos fuertes y volátiles. Proteja la seguridad del operador y de la muestra."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Máxima Protección y Resistencia para Laboratorios"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "En cualquier laboratorio donde se manipulen reactivos, ácidos o bases concentradas, la seguridad del personal y la adecuada ventilación del entorno son prioridades fundamentales. Las reacciones químicas generan vapores, gases corrosivos u olores intensos que pueden comprometer la salud de los operadores e impactar el ambiente de trabajo si no se evacúan de forma eficiente."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "¿Por qué elegir la BIOBASE FH1200P?"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "1. Construcción de Alta Resistencia Química"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El cuerpo principal está fabricado en polipropileno (PP) blanco porcelana de 8 mm. Este material ofrece una resistencia superior frente a ácidos fuertes, bases y compuestos corrosivos, superando las limitaciones del metal expuesto al ataque químico prolongado."
+      },      
+      {
+      "tipo": "titulo",
+        "texto": "2. Superficie de Trabajo Robusta"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Cuenta con una mesa de trabajo en resina fenólica resistente a sustancias químicas, ideal para el manejo constante de reactivos. Además, dispone de opciones de personalización con encimeras en PP, resina epóxica o cerámica según las necesidades analíticas específicas."
+      },
+      {
+      "tipo": "titulo",
+        "texto": "3. Sistema de Extracción Eficiente e Integrado"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Incorpora un soplador centrífugo de PP con velocidad ajustable y un ducto de extracción de 4,3 metros de longitud (Ø250 mm). Esto garantiza un flujo laminar frontal constante de 0,3 - 0,8 m/s, manteniendo los contaminantes alejados de la zona de respiración del operador."
+      },
+      {
+      "tipo": "titulo",
+        "texto": "4. Control y Comodidad Operativa"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Panel Microprocesador con Display LED: Facilita la configuración de la velocidad del aire y funciones del equipo, manteniendo una memoria activa en caso de cortes imprevistos de energía.",
+          "Ventana Frontal Ajustable: Fabricada en vidrio templado de 5 mm, resistente a agentes corrosivos y con ajuste manual de altura para facilitar el trabajo cómodo y seguro.",
+          "Iluminación LED: Incluye dos lámparas LED de 12 W que garantizan un área de trabajo perfectamente iluminada y de bajo consumo energético."
+        ]
+      },
+      {
+      "tipo": "titulo",
+        "texto": "Aplicaciones y Usos Recomendados"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Esta campana de extracción está recomendada para:"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Laboratorios de control de calidad, investigación química y docencia universitaria.",
+          "Análisis industriales y procesos donde se liberen gases o vapores derivados de sustancias compatibles con PP."
+        ]
+      },
+      {
+      "tipo": "titulo",
+        "texto": "Equipamiento y Accesorios Incluidos"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La BIOBASE FH1200P se entrega lista para su instalación e integración en la rutina de laboratorio:"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Gabinete base inferior para almacenamiento.",
+          "Grifo y fregadero de agua en PP anticorrosivo.",
+          "Grifo de gas en PP.",
+          "2 tomacorrientes impermeables integrados.",
+          "Ducto de PVC de 4,3 m con sus respectivas abrazaderas.",
+          "Soplador centrífugo interno en PP."
+        ]
+      },
+      {
+      "tipo": "titulo",
+        "texto": "Aplicaciones Frecuentes"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Se utiliza habitualmente en:"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Laboratorios químicos e industriales: Para manipulación y mezcla de reactivos, solventes o ácidos concentrados.",
+          "Control de calidad e investigación: Procesos donde se evaporan, calientan o destilan sustancias que emiten olores fuertes o vapores peligrosos.",
+          "Laboratorios educativos y universitarios: Para demostraciones o experimentos donde la ventilación local es indispensable para mantener un aire limpio en el espacio."
+        ]
+      },
+      {
+      "tipo": "titulo",
+        "texto": "¿Para qué NO sirve?"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>No protege la muestra o el producto: </strong> No crea un ambiente estéril ni evita la contaminación cruzada del material de trabajo.",
+          "<strong>No es para riesgo biológico: </strong> No debe utilizarse con virus, bacterias u otros agentes infecciosos que requieran contención biológica (como las cabinas de seguridad biológica)."
+        ]
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
+      }
+    ]
   }
 ]    
 
