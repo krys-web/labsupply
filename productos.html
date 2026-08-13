@@ -184,6 +184,60 @@
 <!-- CONTENEDOR DE ALERTAS -->
 <div id="toastContainer" class="toast-container"></div>
 
+<!-- MARCAS PROVEEDORES FLOTANTES -->
+<aside class="marcas-flotantes" aria-label="Marcas destacadas">
+    <button class="marca-item" data-url="https://www.memmert.com/es/el-producto/selector#" title="memmert">
+        <img src="img/marcas/memmert.jpg" alt="memmert">
+    </button>
+    <button class="marca-item" data-url="https://www.miele-professional.es/c/lavadoras-desinfectadoras-para-laboratorio-1978" title="Miele">
+        <img src="img/marcas/miele.jpg" alt="Miele">
+    </button>
+    <button class="marca-item" data-url="https://www.scharlab.com/in/es/" title="scharlab">
+        <img src="img/marcas/scharlab.jpg" alt="scharlab">
+    </button>
+    <button class="marca-item" data-url="https://www.lovibond.com/usa-es" title="lovibond">
+        <img src="img/marcas/lovibond.jpg" alt="lovibond">
+    </button>
+    <button class="marca-item" data-url="https://www.tmmedia.in/category/products/culture-media-supplements/" title="tmmedia">
+        <img src="img/marcas/tmmedia.jpg" alt="tmmedia">
+    </button>
+</aside>
+
+<!-- VENTANA MODAL FLOTANTE (IFRAME) -->
+<div id="modal-marca" class="modal-marca-container" aria-hidden="true">
+    <div class="modal-marca-content">
+        <div class="modal-marca-header">
+            <span id="modal-marca-title">Vista previa del proveedor</span>
+            <button id="btn-cerrar-modal" class="btn-cerrar-modal" aria-label="Cerrar modal">&times;</button>
+        </div>
+        <div class="modal-marca-body">
+            <iframe id="iframe-marca" src="" frameborder="0" title="Página del proveedor"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+ document.querySelectorAll('.marca-item').forEach(boton => {
+    boton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = boton.getAttribute('data-url');
+        const titulo = boton.getAttribute('title');
+
+        // Dimensiones de la ventana flotante
+        const ancho = 1000;
+        const alto = 700;
+        const izquierda = (screen.width - ancho) / 2;
+        const arriba = (screen.height - alto) / 2;
+
+        window.open(
+            url,
+            titulo,
+            `width=${ancho},height=${alto},top=${arriba},left=${izquierda},scrollbars=yes,resizable=yes`
+        );
+    });
+});
+</script>
+
 <!-- ANIMACION BOTON WHATSAPP -->
  <script>
 const btn = document.getElementById("btnWhatsapp");
