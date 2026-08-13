@@ -4995,3 +4995,134 @@ li strong {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   MARCAS PROVEEDORES FLOTANTES
+   ========================================== */
+.marcas-flotantes {
+    position: fixed;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    z-index: 990;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.marca-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 0;
+}
+
+.marca-item img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: filter 0.25s ease;
+}
+
+.marca-item:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.marca-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* ==========================================
+   VENTANA MODAL FLOTANTE
+   ========================================== */
+.modal-marca-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-marca-container.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-marca-content {
+    width: 90%;
+    max-width: 1100px;
+    height: 85vh;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-marca-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-cerrar-modal {
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-cerrar-modal:hover {
+    color: #000;
+}
+
+.modal-marca-body {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-marca-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
