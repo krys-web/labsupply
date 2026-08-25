@@ -817,7 +817,7 @@
         "tipo": "lista",
         "items": [
           "Función: Agente oxidante receptor en la trampa de absorción.",
-          "Preparación: Diluir $100 mL  de H2O_2$ al 30% (libre de estabilizantes azufrados) en 900 mL de agua destilada. Justo antes de conectar el montaje, se añaden unas gotas del indicador rojo de metilo y se neutraliza con NaOH 0.01N hasta obtener un viraje a amarillo pálido."
+          "Preparación: Diluir 100 mL  de H2O 2 al 30% (libre de estabilizantes azufrados) en 900 mL de agua destilada. Justo antes de conectar el montaje, se añaden unas gotas del indicador rojo de metilo y se neutraliza con NaOH 0.01N hasta obtener un viraje a amarillo pálido."
         ]
       },
       {
@@ -1141,7 +1141,7 @@
         "tipo": "lista",
         "items": [
           "<strong>Desnaturalización de Proteínas : </strong>El calor húmedo altera de forma irreversible la estructura proteica y enzimática de los patógenos, inactivándolos por completo.",
-          "<strong>Presión y Punto de Ebullición : </strong>Al aumentar la presión interna de la cámara (comúnmente a 1.05 kg/cm2 o 15psi por encima de la presión atmosférica), se logra elevar la temperatura del vapor saturado hasta los 121°C o $134°C",
+          "<strong>Presión y Punto de Ebullición : </strong>Al aumentar la presión interna de la cámara (comúnmente a 1.05 kg/cm2 o 15psi por encima de la presión atmosférica), se logra elevar la temperatura del vapor saturado hasta los 121°C o 134°C",
           "<strong>Eficacia Contra Esporas : </strong>Es uno de los pocos métodos capaces de destruir esporas bacterianas altamente resistentes como Bacillus stearothermophilus, utilizadas frecuentemente como controles biológicos de calidad."
         ]
       },  
@@ -1223,7 +1223,7 @@
         "tipo": "lista",
         "items": [
           "<strong>Digestión de muestras : </strong>Disolución de matrices orgánicas e inorgánicas para análisis de metales por Espectrometría de Absorción Atómica (AAS) o ICP-MS.",
-          "<strong>Preparación de Agua Regia : </strong>Mezcla con ácido clorhídrico (HCl) en proporción $1:3$ para disolver metales nobles como oro y platino.",
+          "<strong>Preparación de Agua Regia : </strong>Mezcla con ácido clorhídrico (HCl) en proporción 1:3 para disolver metales nobles como oro y platino.",
           "<strong>Lavado de material de vidrio : </strong>Descontaminación de trazas metálicas en matraz y material volumétrico.",
           "<strong>Síntesis orgánica e inorgánica : </strong>Agente de nitración para la producción de compuestos intermedios y reactivos derivados."
         ]
@@ -1267,7 +1267,7 @@
         "tipo": "lista",
         "items": [
           "Almacenar en gabinetes exclusivos para materiales corrosivos.",
-          "<strong>Separar de materia orgánica y bases : </strong>SNo almacenar junto a solventes orgánicos (acetona, etanol) ni reductores fuertes; el contacto accidental puede desencadenar reacciones violentas o incendios.",
+          "<strong>Separar de materia orgánica y bases : </strong>No almacenar junto a solventes orgánicos (acetona, etanol) ni reductores fuertes; el contacto accidental puede desencadenar reacciones violentas o incendios.",
           "Utilizar envases de vidrio ámbar protegidos contra impactos para prevenir la fotodescomposición."
         ]
       },
@@ -1278,7 +1278,7 @@
       {
         "tipo": "lista",
         "items": [
-          "<strong>Inactivación de derrames menores : </strong>ENeutralizar gradualmente con una base débil como bicarbonato de sodio (NaHCO3) o carbonato de sodio (Na2CO3) antes de limpiar con material absorbente inerte (vermiculita).",
+          "<strong>Inactivación de derrames menores : </strong>Neutralizar gradualmente con una base débil como bicarbonato de sodio (NaHCO3) o carbonato de sodio (Na2CO3) antes de limpiar con material absorbente inerte (vermiculita).",
           "<strong>Disposición de residuos : </strong>El ácido agotado o neutralizado debe gestionarse como residuo peligroso según las normativas locales y nunca descartarse directamente por el desagüe."
         ]
       },
@@ -1298,7 +1298,7 @@
         "tipo": "lista",
         "items": [
           "<strong>Acción Ácida : </strong>En solución acuosa se disocia completamente liberando protones.",
-          "<strong>Acción Oxidante : </strong>Al reaccionar con metales no libera simplemente hidrógeno gaseoso ($\text{H}_2$), sino que oxida el metal liberando óxidos de nitrógeno (NOx). La reacción con cobre ilustra este comportamiento."
+          "<strong>Acción Oxidante : </strong>Al reaccionar con metales no libera simplemente hidrógeno gaseoso (H2), sino que oxida el metal liberando óxidos de nitrógeno (NOx). La reacción con cobre ilustra este comportamiento."
         ]
       },  
       {
