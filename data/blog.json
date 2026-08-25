@@ -1198,6 +1198,180 @@
         "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
       }
     ]
+  },
+ {
+  "id": 8,
+  "slug": "acido, nitrico, laboratorio, guia, uso, seguridad",
+  "titulo": "ÁCIDO NÍTRICO, GUIA DE USO EN LOS LABORATORIOS.",
+  "resumen": "El ácido nítrico (HNO3) es uno de los reactivos inorgánicos más utilizados en laboratorios analíticos, de docencia e investigación industrial. Su carácter de ácido fuerte y su elevado poder oxidante lo convierten en un insumo clave para la digestión de muestras y la síntesis química.",
+  "fecha": "2026-08-25",
+  "categoria": "Reactivos",
+  "imagen": "img/blog/articulo8.jpg",
+  "lectura": "6 min",
+  "metaDescripcion": "El uso de HNO3 concentrado genera vapores altamente irritantes y tóxicos (NOx). La manipulación sin el equipo adecuado representa riesgos severos de quemaduras químicas y daños respiratorios.",
+  "keywords": "acido, nitrico, laboratorio, guia, uso, Guayaquil, Labsupply, Ecuador",
+    "contenido": [
+      {
+        "tipo": "titulo",
+        "texto": "Ácido Nítrico: Guía Esencial de Uso y Seguridad en el Laboratorio."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Principales Aplicaciones en el Laboratorio."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Digestión de muestras : </strong>Disolución de matrices orgánicas e inorgánicas para análisis de metales por Espectrometría de Absorción Atómica (AAS) o ICP-MS.",
+          "<strong>Preparación de Agua Regia : </strong>Mezcla con ácido clorhídrico (HCl) en proporción $1:3$ para disolver metales nobles como oro y platino.",
+          "<strong>Lavado de material de vidrio : </strong>Descontaminación de trazas metálicas en matraz y material volumétrico.",
+          "<strong>Síntesis orgánica e inorgánica : </strong>Agente de nitración para la producción de compuestos intermedios y reactivos derivados."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Protocolo de Seguridad y Manejo."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El uso de HNO3 concentrado genera vapores altamente irritantes y tóxicos (NOx). La manipulación sin el equipo adecuado representa riesgos severos de quemaduras químicas y daños respiratorios."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "1. Equipo de Protección Personal (EPP)."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Guantes : </strong>Utilizar guantes de nitrilo grueso o de neopreno. Evitar guantes de látex delgados, ya que el ácido concentrado puede degradarlos rápidamente.",
+          "<strong>Protección ocular y facial : </strong>Gafas de seguridad de sello hermético (anti-salpicaduras) y pantalla facial si se manipulan volúmenes grandes.",
+          "<strong>Indumentaria : </strong>Bata de laboratorio 100% algodón y calzado cerrado de cuero."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "2. Condiciones de Manipulación."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Trabajar siempre dentro de una campana de extracción de gases operativa.",
+          "Al diluir, aplicar la regla de oro de la química: verter siempre el ácido sobre el agua, nunca al revés, para evitar proyecciones por la reacción exotérmica."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "3. Almacenamiento Correcto."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Almacenar en gabinetes exclusivos para materiales corrosivos.",
+          "<strong>Separar de materia orgánica y bases : </strong>SNo almacenar junto a solventes orgánicos (acetona, etanol) ni reductores fuertes; el contacto accidental puede desencadenar reacciones violentas o incendios.",
+          "Utilizar envases de vidrio ámbar protegidos contra impactos para prevenir la fotodescomposición."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Gestión de Derrames y Residuos."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Inactivación de derrames menores : </strong>ENeutralizar gradualmente con una base débil como bicarbonato de sodio (NaHCO3) o carbonato de sodio (Na2CO3) antes de limpiar con material absorbente inerte (vermiculita).",
+          "<strong>Disposición de residuos : </strong>El ácido agotado o neutralizado debe gestionarse como residuo peligroso según las normativas locales y nunca descartarse directamente por el desagüe."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "REACTIVO ÚNICO"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "1. Química Fundamental: ¿Por qué es un Reactivo Único?"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El ácido nítrico actúa simultáneamente como un ácido fuerte y como un agente oxidante potente, una dualidad que lo diferencia de otros ácidos minerales como el clorhídrico (HCl)."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Acción Ácida : </strong>En solución acuosa se disocia completamente liberando protones.",
+          "<strong>Acción Oxidante : </strong>Al reaccionar con metales no libera simplemente hidrógeno gaseoso ($\text{H}_2$), sino que oxida el metal liberando óxidos de nitrógeno (NOx). La reacción con cobre ilustra este comportamiento."
+        ]
+      },  
+      {
+        "tipo": "titulo",
+        "texto": "2. Tabla de Compatibilidad de Materiales."
+      },   
+      {
+        "tipo": "parrafo",
+        "texto": "Antes de trasvasar o almacenar ácido nítrico, es fundamental seleccionar el material adecuado para evitar la degradación del contenedor o la contaminación del reactivo."
+      }, 
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Vidrio borosilicato 3.3 : </strong>  Resistencia (Excelente) | Material estándar. Preferiblemente ámbar para evitar la fotodescomposición.",
+          "<strong>PTFE (Teflón) : </strong>Resistencia (Excelente) | Ideal para recipientes de digestión por microondas y tapones.",
+          "<strong>HDPE (Polietileno de Alta Densidad) : </strong>Resistencia (Buena (a temperatura ambiente)) | Aceptable para almacenamiento temporal o concentraciones diluidas.",
+          "<strong>Acero Inoxidable (316L) : </strong> Resistencia (Buena) | Forma una capa pasivante de óxido que previene la corrosión rápida.",
+          "<strong>Nitrilo / Neopreno (EPP) : </strong>Resistencia (Moderada) | Adecuado para guantes de protección contra salpicaduras ocasionales.",
+          "<strong>CLátex / PVC flexible : </strong>Resistencia (No compatible) | Se degrada rápidamente y puede arder en contacto con ácido concentrado."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "3. Aplicación Avanzada: Preparación de Agua Regia."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El Agua Regia es una solución altamente corrosiva utilizada para disolver metales refractarios y especies nobles como el oro (Au) y el platino (Pt)."
+      }, 
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Proporción volumétrica : </strong>1 parte de HNO3 (65%) : 3 partes de HCl (37%)",
+          "<strong>Mecanismo : </strong>El HNO3 actúa como oxidante convirtiendo el metal en su catión, mientras que el HCl aporta los iones cloruro (Cl-) para formar complejos solubles estables (como el ácido tetracloroáurico, HAuCl4)."
+        ]
+      }, 
+      {
+        "tipo": "titulo",
+        "texto": "4. Preguntas Frecuentes (FAQ) para el Lector"
+      }, 
+      {
+        "tipo": "titulo",
+        "texto": "¿Por qué el ácido nítrico transparente se vuelve amarillo con el tiempo?."
+      }, 
+      {
+        "tipo": "parrafo",
+        "texto": "Se debe a la descomposición fotoquímica natural causada por la luz solar o el calor, liberando dióxido de nitrógeno (NO2), un gas de color pardo rojizo que permanece disuelto en el líquido"
+      },  
+      {
+        "tipo": "titulo",
+        "texto": "¿Qué hacer en caso de contacto accidental con la piel?"
+      }, 
+      {
+        "tipo": "lista",
+        "items": [
+          "Lavar de inmediato con abundante agua corriente durante al menos 15 minutos.",
+          "Quitar la ropa contaminada mientras se enjuaga.",
+          "El ácido nítrico produce una mancha amarilla característica en la piel dueña de la reacción xantoproteica (denaturación de proteínas con anillos aromáticos). No intente frotar la zona; busque atención médica si hay quemadura o irritación persistente."
+        ]
+      }, 
+      {
+        "tipo": "titulo",
+        "texto": "Conclusión: El Rigor como Clave en el Manejo de Reactivos Críticos."
+      }, 
+      {
+        "tipo": "parrafo",
+        "texto": "SEl ácido nítrico es una herramienta indispensable en la química moderna. Desde la preparación de muestras analíticas de alta precisión hasta la limpieza técnica de material volumétrico, su versatilidad es incuestionable. Sin embargo, su elevado poder oxidante y corrosivo exige un estándar de seguridad implacable."
+      },    
+      {
+        "tipo": "parrafo",
+        "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
+      }
+    ]
   }
 ]    
 
