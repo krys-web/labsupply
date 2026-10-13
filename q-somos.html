@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos - FUNDACIRE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegación Principal -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="FUNDACIRE Logo">
+                <div class="logo-text">
+                    <span class="title">FUNDACIRE</span>
+                    <span class="subtitle">Ciudad Refugio</span>
+                </div>
+            </a>
+
+            <!-- Botón del menú desplegable para móviles/tablets -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="nosotros.html">Qué es Fundacire</a></li>
+                    <li><a href="q-somos.html" class="active">Quiénes somos</a></li> 
+                    <li><a href="donaciones.html" class="btn-donate-nav">Donar</a></li>
+                    <li class="nav-webmail-wrapper">
+                        <a href="https://www.fundacire.org/webmail" target="_blank" rel="noopener noreferrer" class="nav-webmail-btn" aria-label="Correo electrónico para directivos.">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="webmail-tooltip">Correo electrónico para directivos.</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Quiénes Somos y Comité Ejecutivo -->
+    <main class="container page-padding">
+        
+        <!-- Sección Introductoria ¿Quiénes Somos? -->
+        <section class="section" style="padding-top: 10px; padding-bottom: 30px;">
+            <div class="container">
+                <div class="about-row">
+                    <div class="image-block">
+                        <img src="q-somos.jpeg" alt="¿Quiénes Somos? - FUNDACIRE">
+                    </div>
+                    <div class="text-block">
+                        <h2>¿QUIÉNES SOMOS?</h2>
+                        <p class="subtitle-page" style="margin-top: 0; margin-bottom: 15px; font-weight: 600; color: var(--primary-blue);">
+                            “Somos ciudadanos de pensamiento Cristocéntrico comprometidos con el bienestar social de la comunidad”.
+                        </p>
+                        <p>
+                            Todos los miembros del Comité Ejecutivo, así como funcionarios administrativos, asesores, y cuanta persona se vincule a esta Fundación, debe ser cristiano confeso; y, debe comprometerse a ejercer las tareas que asuma o se le asignen, con la mayor pulcritud y responsabilidad, en el entendido de que trabajan para una Organización Sin Fines de Lucro que se sustenta por medio de donaciones de buena fe, y por tanto, su participación es prioritariamente vocacional y de servicio social comunitario.
+                        </p>
+                        <div style="font-size: 0.78em; line-height: 1.25; margin-top: 15px;">
+                            <strong>Jesús dijo :</strong><br>
+                            <span style="font-style: italic;">“No nos cansemos, pues, de hacer bien; porque a su tiempo segaremos, si no desmayamos”.</span><br>
+                            <strong>(Gálatas 6:9)</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Comité Ejecutivo -->
+        <section id="somos" class="section" style="padding-top: 20px;">
+            <h1 class="page-title text-center">COMITÉ EJECUTIVO</h1>
+            
+            <!-- Contenedor para la Foto Grupal -->
+            <div class="group-photo-container">
+                <div class="group-photo-card">
+                    <img src="img/foto comite.png" alt="FOTO GRUPAL - FUNDACIRE">
+                    <div class="group-photo-caption">
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <!-- ÁRBOL JERÁRQUICO: Nivel 1 (Presidente solo arriba) -->
+            <div class="hierarchy-top-node">
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Rafael Medrano - Presidente 1.jpeg" alt="Presidente Vitalicio">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Rev. Dr. Rafael Medrano</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Presidente Vitalicio</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">rmedrano@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Línea de conexión visual del árbol -->
+            <div class="tree-connector"></div>
+
+            <!-- Nivel 2: Grilla de 3 columnas para el resto del Comité Ejecutivo -->
+            <div class="hierarchy-grid-3">
+                
+                <!-- Vicepresidente -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Raúl Romero - Vicepresidente - 1.jpeg" alt="Vicepresidente">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Raúl Romero</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Vicepresidente</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">rromero@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Capellán -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Pércido Garces - Capellán 1.jpeg" alt="Capellán">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Rev. Pérsido Garcés</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Capellán</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">pgarces@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Secretaria -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Ingrid Santos 1.jpeg" alt="Secretaria">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Ingrid Santos</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Secretaria</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">ingrids@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tesorera -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Yris Arias - 1.jpeg" alt="Tesorera">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Yris Arias Lasose De Montas</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Tesorera</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">yrisa@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Contador -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Bernardo Santana 1.jpeg" alt="Sindico">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Bernardo Santana</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Contador</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">bsantana@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Relacionista Público -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Benny Polanco 1 .jpeg" alt="Relacionista Público">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Rev. Benny Polanco</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Relacionista Público</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">bpolanco@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Síndico -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Yoel Olivo - 1.jpeg" alt="Vocal">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Yoel Olivo</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">SÍNDICO</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">yoelolivo@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Vocal 1 -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Sara Medrano 1.jpeg" alt="Vocal">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Sara Medrano</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Vocal</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">rmedrano@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Vocal 2 -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Norma Polanco.jpeg" alt="Vocal">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Norma Polanco</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Vocal</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">naherrerapolanco@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Vocal 4 -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Rosalía Calixto 1.jpeg" alt="Vocal">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Rosalía Calixto</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Vocal</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">rcalixto@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Vocal 5 -->
+                <article class="member-card-vertical">
+                    <div class="card-image-wrapper">
+                        <img src="img/Mario Javier de León 1.jpeg" alt="Vocal">
+                    </div>
+                    <div class="card-text-wrapper member-card-info">
+                        <h2 class="member-name">Mario Javier De León</h2>
+                        <div class="member-badge" style="background-color: transparent; color: inherit; border: none; padding: 0;">Vocal</div>
+                        <ul class="member-details-list">
+                            <li>
+                                <i class="fa-solid fa-square-phone"></i>
+                                <span>(***) ***-****</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span><strong style="font-style: italic;">mjavier@fundacire.org</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Compartido -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Síganos</h4>
+                <p>Muy pronto… podrá mantenerse al tanto de todas nuestras actividades, a través de las redes :</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación</h4>
+                <p><i class="fa-solid fa-envelope"></i> contacto@fundacire.org</p>
+                <p><i class="fa-solid fa-phone"></i> (917) 607 9346 </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fundación Ciudad Refugio (FUNDACIRE). Todos los Derechos Reservados.</p>
+            <p>Diseñado por: KRYSWEB | <a href="https://www.krysweb.com/">Visitar Sitio</a></p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/19176079346?text=Hola,%20deseo%20más%20información%20sobre%20la%20Fundación%20Ciudad%20Refugio" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
