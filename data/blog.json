@@ -2041,6 +2041,166 @@
         "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
       }
     ]
+  },
+{
+  "id": 13,
+  "slug": "piscinas, camaron, alta precisión, wtw, Lovibond",
+  "titulo": "Importancia del Análisis del Agua en las Piscinas de Camarón: Control de Alta Precisión con Equipos WTW y Lovibond",
+  "resumen": "El éxito en la camaronicultura moderna no solo depende de una buena alimentación o de una densidad de siembra adecuada; el pilar fundamental de la producción intensiva y semi-intensiva es la calidad del agua. Mantener los parámetros físico-químicos en rangos óptimos previene mortalidades masivas, optimiza la conversión alimenticia (FCR) y acelera el crecimiento del camarón (Litopenaeus vannamei).",
+  "fecha": "2026-10-13",
+  "categoria": "Equipos",
+  "imagen": "img/blog/articulo13.jpeg",
+  "lectura": "5 min",
+  "metaDescripcion": "Para lograr un monitoreo confiable, los productores y laboratoristas necesitan herramientas de medición de alta precisión. En este artículo detallamos los equipos indispensables de marcas líderes a nivel mundial como WTW y Lovibond.",
+  "keywords": "piscinas, camaron, alta precisión, wtw, Lovibond, Guayaquil, Labsupply, Ecuador",
+    "contenido": [
+      {
+        "tipo": "titulo",
+        "texto": "1. Parámetros Críticos y Equipos de Medición en Campo (WTW)"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "En el manejo diario de las piscinas camaroneras, la rapidez y exactitud en las mediciones in situ marcan la diferencia entre prevenir un evento anóxico o perder la cosecha. La línea de instrumentos portátiles de WTW (Xylem) ofrece la robustez y precisión requeridas para condiciones tropicales exigentes."
+      },
+
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Oxígeno Disuelto (OD): : </strong>LEl oxígeno es vital tanto para el camarón como para los microorganismos benéficos del sistema. Niveles bajos provocan estrés, menor resistencia a enfermedades y bajas tasas de crecimiento.",
+          "<strong>Equipo recomendado : </strong>WTW Oxi 3310 / ProfiLine Oxi 3200. Sensores galvánicos u ópticos de respuesta rápida que compensan automáticamente la temperatura y la salinidad, evitando errores comunes en aguas salobres.",
+          "<strong>pH : </strong>El pH afecta directamente la toxicidad del amoníaco total y el metabolismo del camarón. Fluctuaciones drásticas (comunes por floraciones algales o blooms) estresan al animal y dañan sus branquias.",
+          "<strong>Equipo recomendado : </strong>WTW SenTix® con medidores portátiles de la serie Multi 3320 o pH 3310. Electrodomésticos impermeables con compensación de temperatura y alta durabilidad frente a ambientes salinos.",
+          "<strong>Salinidad y Conductividad : </strong>WEl camarón blanco tolera amplios rangos, pero cambios bruscos en la salinidad (por evaporación o lluvias intensas) generan un choque osmótico severo.",
+          "<strong>Equipo recomendado : </strong>WTW Cond 3310. Permite lecturas estables de conductividad, salinidad práctica y TDS, fundamentales para ajustar las tasas de recambio de agua."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "2. Análisis de Laboratorio de Alta Precisión (WTW y Lovibond)"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Cuando se requiere un análisis químico detallado —ya sea para el control de calidad del agua de aporte, efluentes o diagnóstico avanzado de la piscina—, los laboratorios en granja emplean espectrofotometría y fotometría de alta gama."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Espectrofotometría y Fotometría Avanzada (WTW)"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Espectrofotómetros UV-VIS (como la serie photoLab® de WTW) : </strong>Son esenciales para cuantificar nutrientes y contaminantes específicos con metodologías preprogramadas. Permiten medir con exactitud compuestos como amoníaco, nitritos, nitratos y fosfatos, cuyos excesos pueden desencadenar proliferaciones tóxicas de fitoplancton o toxicidad directa por amoníaco libre ($NH_3$)."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Fotometría de Campo y Laboratorio (Lovibond)"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los fotómetros multiparamétricos de Lovibond (como las series MD 600 o MD 200) utilizan reactivos en pastilla o líquido de alta estabilidad, ideales para laboratorios de camaroneras. Los ensayos más importantes incluyen : "
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Cloro Libre y Cloro Total (DPD) : </strong>Crítico cuando se utiliza agua de red, pozos tratados o sistemas de desinfección en la preparación de estanques de cría o laboratorios de larvicultura. El método DPD (con pastillas o reactivos Lovibond) garantiza una lectura exacta sin interferencias.",
+          "<strong>Hierro (Ferrover / Método Ferrozine) : </strong>SEl monitoreo de hierro es clave en zonas con suelos ácidos o acuíferos particulares, ya que concentraciones elevadas pueden oxidarse y precipitar en las branquias del camarón o afectar la disponibilidad de otros nutrientes.",
+          "<strong>Otros iones y compuestos determinantes : </strong>",
+          "<strong>Alcalinidad y Dureza : </strong>EEsenciales para amortiguar los cambios de pH (efecto tampón) y asegurar la calcificación correcta del exoesqueleto durante la muda.",
+          "<strong>Amoníaco, Nitritos y Nitratos : </strong>Monitoreo preciso de los ciclos del nitrógeno para evitar picos tóxicos derivados de la acumulación de alimento no consumido y heces."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Guía paso a paso sobre cómo realizar la calibración y el mantenimiento preventivo de los electrodos de pH y oxígeno disuelto WTW para uso en camaroneras."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Una correcta calibración y un mantenimiento preventivo riguroso son fundamentales para garantizar lecturas exactas en campo, especialmente en las duras condiciones de las camaroneras (alta salinidad, materia orgánica, temperatura y humedad)."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "A continuación, te presentamos una guía paso a paso para el mantenimiento y calibración de los electrodos de pH (serie SenTix®) y oxígeno disuelto (sensores galvánicos u ópticos WTW)."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Preparación y Limpieza General de Electrodos"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Los sensores que operan en piscinas camaroneras acumulan biofilud, sedimentos y grasa orgánica que falsean las lecturas."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Enjuague inicial : </strong>Lave el sensor con agua destilada o desionizada para retirar residuos superficiales de agua salobre.",
+          "<strong>Limpieza de pH : </strong>Si el electrodo de pH tiene materia orgánica adherida, sumérjalo durante unos minutos en una solución de pepsina/HCl o en una solución limpiadora suave, luego enjuague con abundante agua destilada. Nunca frote el bulbo de vidrio con materiales abrasivos o papel secante fuerte, ya que puede rayarlo.",
+          "<strong>Limpieza de Oxígeno : </strong>LEn los sensores de oxígeno, limpie la membrana con cuidado usando un paño suave o papel tissue humedecido con agua destilada. Evite tocar o presionar la membrana de los sensores galvánicos."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Calibración del Electrodo de pH (WTW SenTix®)"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La calibración compensa el envejecimiento del electrodo y asegura la linealidad de la pendiente."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Selección de soluciones tampón (buffers) : </strong>Utilice soluciones estándar certificadas de pH 7.00 (buffer neutro) y pH 4.01 o 10.01 (según el rango habitual de sus piscinas). Se recomienda usar soluciones frescas en cada calibración.",
+          "<strong>Punto 1 (Neutro) : </strong>Enjuague el electrodo con agua destilada, séquelo con cuidado sin frotar e introdúzcalo en el buffer de pH 7.00. Espere a que la lectura se estabilice en el medidor WTW y confirme el primer punto.",
+          "<strong>Punto 2 (Ácido o Alcalino) : </strong>Enjuague nuevamente con agua destilada e introdúzcalo en el buffer de pH 4.01 (o 10.01). Espere la estabilización y registre el segundo punto.",
+          "<strong>Verificación de la pendiente : </strong>Revise los valores de Slope (Pendiente) y Asymmetry que muestra el equipo. Una pendiente aceptable debe encontrarse generalmente entre el 95% y el 105%. Si la pendiente baja del 85-90%, el electrodo requiere limpieza profunda o reemplazo."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Calibración del Sensor de Oxígeno Disuelto WTW"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los sensores de oxígeno de WTW (ya sean galvánicos o de luminiscencia óptica FDO) se calibran de forma muy sencilla al aire."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Preparación del ambiente de calibración : </strong>Asegúrese de que la membrana o tapa sensora esté limpia y seca por fuera. La forma más común es colocar el sensor en un vaso de calibración o recipiente que contenga una pequeña cantidad de agua en el fondo (sin que toque el sensor) para garantizar 100% de humedad relativa, o calibrar directamente al aire libre a la sombra evitando corrientes térmicas bruscas.",
+          "<strong>Proceso en el medidor : </strong>Acceda al menú de calibración del equipo WTW (por ejemplo, OxiLine o MultiSeries) y seleccione la opción de calibración al aire (Air Calibration).",
+          "<strong>Estabilización : </strong>Permita que el sensor compense la temperatura ambiental y la presión barométrica (los equipos WTW modernos suelen integrar sensor de presión barométrica automático).",
+          "<strong>Confirmación : </strong>Una vez que el valor de saturación se estabilice en el 100% (o en el valor de oxígeno correspondiente a la presión/altitud de su zona), guarde los cambios."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Mantenimiento Preventivo Periódico"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Buenas prácticas para extender la vida útil de los equipos"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Almacenamiento del electrodo de pH : </strong>Al finalizar la jornada, guarde el electrodo de pH en su cápsula de protección que contiene la solución de almacenamiento recomendada (generalmente KCl 3 mol/l). Nunca lo almacene en agua destilada ni seco, ya que esto arruina el bulbo de vidrio de forma irreversible.",
+          "<strong>Inspección de membranas de oxígeno : </strong>Revise periódicamente el estado de la cabeza del sensor de oxígeno. Si es un cabezal óptico (tipo SmartCap en los modelos FDO de WTW), verifique que no tenga rayones en la lente. Si es un sensor galvánico, revise que el electrolito interno no tenga burbujas de aire y que la membrana de teflón esté tensa y sin perforaciones (cambie el cabezal o membrana electrolítica según las indicaciones del fabricante si nota deriva en las lecturas).",
+          "<strong>Protección contra la intemperie : </strong>Aunque los medidores portátiles WTW son impermeables (IP67), evite dejarlos expuestos directamente al sol intenso o sumergidos accidentalmente en lodo denso de fondo de piscina."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Conclusión"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La tecnificación de las camaroneras a través de un programa riguroso de control de calidad de agua mitiga los riesgos biológicos y financieros. Contar con tecnología alemana de punta como los medidores portátiles WTW para campo y los fotómetros/espectrofotómetros de Lovibond y WTW para laboratorio asegura datos confiables, toma de decisiones oportunas y una producción camaronera sostenible y altamente rentable."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
+      }
+    ]
   }
 ]    
 
