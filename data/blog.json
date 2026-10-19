@@ -2066,11 +2066,11 @@
       {
         "tipo": "lista",
         "items": [
-          "<strong>Oxígeno Disuelto (OD): : </strong>LEl oxígeno es vital tanto para el camarón como para los microorganismos benéficos del sistema. Niveles bajos provocan estrés, menor resistencia a enfermedades y bajas tasas de crecimiento.",
-          "<strong>Equipo recomendado : </strong>WTW Oxi 3310 / ProfiLine Oxi 3200. Sensores galvánicos u ópticos de respuesta rápida que compensan automáticamente la temperatura y la salinidad, evitando errores comunes en aguas salobres.",
+          "<strong>Oxígeno Disuelto (OD): : </strong>El oxígeno es vital tanto para el camarón como para los microorganismos benéficos del sistema. Niveles bajos provocan estrés, menor resistencia a enfermedades y bajas tasas de crecimiento.",
+          "<strong>Equipo recomendado : </strong>WTW Oxi 3310 / ProfiLine Oxi 3200. Sensores galvanizados u ópticos de respuesta rápida que compensan automáticamente la temperatura y la salinidad, evitando errores comunes en aguas salobres.",
           "<strong>pH : </strong>El pH afecta directamente la toxicidad del amoníaco total y el metabolismo del camarón. Fluctuaciones drásticas (comunes por floraciones algales o blooms) estresan al animal y dañan sus branquias.",
-          "<strong>Equipo recomendado : </strong>WTW SenTix® con medidores portátiles de la serie Multi 3320 o pH 3310. Electrodomésticos impermeables con compensación de temperatura y alta durabilidad frente a ambientes salinos.",
-          "<strong>Salinidad y Conductividad : </strong>WEl camarón blanco tolera amplios rangos, pero cambios bruscos en la salinidad (por evaporación o lluvias intensas) generan un choque osmótico severo.",
+          "<strong>Equipo recomendado : </strong>WTW SenTix® con medidores portátiles de la serie Multi 3320 o pH 3310. Equipos impermeables con compensación de temperatura y alta durabilidad frente a ambientes salinos.",
+          "<strong>Salinidad y Conductividad : </strong>El camarón blanco tolera amplios rangos, pero cambios bruscos en la salinidad (por evaporación o lluvias intensas) generan un choque osmótico severo.",
           "<strong>Equipo recomendado : </strong>WTW Cond 3310. Permite lecturas estables de conductividad, salinidad práctica y TDS, fundamentales para ajustar las tasas de recambio de agua."
         ]
       },
@@ -2089,7 +2089,7 @@
       {
         "tipo": "lista",
         "items": [
-          "<strong>Espectrofotómetros UV-VIS (como la serie photoLab® de WTW) : </strong>Son esenciales para cuantificar nutrientes y contaminantes específicos con metodologías preprogramadas. Permiten medir con exactitud compuestos como amoníaco, nitritos, nitratos y fosfatos, cuyos excesos pueden desencadenar proliferaciones tóxicas de fitoplancton o toxicidad directa por amoníaco libre ($NH_3$)."
+          "<strong>Espectrofotómetros UV-VIS (como la serie photoLab® de WTW) : </strong>Son esenciales para cuantificar nutrientes y contaminantes específicos con metodologías preprogramadas. Permiten medir con exactitud compuestos como amoníaco, nitritos, nitratos y fosfatos, cuyos excesos pueden desencadenar proliferaciones tóxicas de fitoplancton o toxicidad directa por amoníaco libre (NH3)."
         ]
       },
       {
@@ -2104,9 +2104,9 @@
         "tipo": "lista",
         "items": [
           "<strong>Cloro Libre y Cloro Total (DPD) : </strong>Crítico cuando se utiliza agua de red, pozos tratados o sistemas de desinfección en la preparación de estanques de cría o laboratorios de larvicultura. El método DPD (con pastillas o reactivos Lovibond) garantiza una lectura exacta sin interferencias.",
-          "<strong>Hierro (Ferrover / Método Ferrozine) : </strong>SEl monitoreo de hierro es clave en zonas con suelos ácidos o acuíferos particulares, ya que concentraciones elevadas pueden oxidarse y precipitar en las branquias del camarón o afectar la disponibilidad de otros nutrientes.",
+          "<strong>Hierro (Ferrover / Método Ferrozine) : </strong>El monitoreo de hierro es clave en zonas con suelos ácidos o acuíferos particulares, ya que concentraciones elevadas pueden oxidarse y precipitar en las branquias del camarón o afectar la disponibilidad de otros nutrientes.",
           "<strong>Otros iones y compuestos determinantes : </strong>",
-          "<strong>Alcalinidad y Dureza : </strong>EEsenciales para amortiguar los cambios de pH (efecto tampón) y asegurar la calcificación correcta del exoesqueleto durante la muda.",
+          "<strong>Alcalinidad y Dureza : </strong>Esenciales para amortiguar los cambios de pH (efecto tampón) y asegurar la calcificación correcta del exoesqueleto durante la muda.",
           "<strong>Amoníaco, Nitritos y Nitratos : </strong>Monitoreo preciso de los ciclos del nitrógeno para evitar picos tóxicos derivados de la acumulación de alimento no consumido y heces."
         ]
       },
@@ -2128,14 +2128,14 @@
       },
       {
         "tipo": "titulo",
-        "texto": "Los sensores que operan en piscinas camaroneras acumulan biofilud, sedimentos y grasa orgánica que falsean las lecturas."
+        "texto": "Los sensores que operan en piscinas camaroneras acumulan biofilm, sedimentos y grasa orgánica que falsean las lecturas."
       },
       {
         "tipo": "lista",
         "items": [
           "<strong>Enjuague inicial : </strong>Lave el sensor con agua destilada o desionizada para retirar residuos superficiales de agua salobre.",
           "<strong>Limpieza de pH : </strong>Si el electrodo de pH tiene materia orgánica adherida, sumérjalo durante unos minutos en una solución de pepsina/HCl o en una solución limpiadora suave, luego enjuague con abundante agua destilada. Nunca frote el bulbo de vidrio con materiales abrasivos o papel secante fuerte, ya que puede rayarlo.",
-          "<strong>Limpieza de Oxígeno : </strong>LEn los sensores de oxígeno, limpie la membrana con cuidado usando un paño suave o papel tissue humedecido con agua destilada. Evite tocar o presionar la membrana de los sensores galvánicos."
+          "<strong>Limpieza de Oxígeno : </strong>Los sensores de oxígeno, limpie la membrana con cuidado usando un paño suave o papel tissue humedecido con agua destilada. Evite tocar o presionar la membrana de los sensores galvánicos."
         ]
       },
       {
@@ -2195,6 +2195,258 @@
       {
         "tipo": "parrafo",
         "texto": "La tecnificación de las camaroneras a través de un programa riguroso de control de calidad de agua mitiga los riesgos biológicos y financieros. Contar con tecnología alemana de punta como los medidores portátiles WTW para campo y los fotómetros/espectrofotómetros de Lovibond y WTW para laboratorio asegura datos confiables, toma de decisiones oportunas y una producción camaronera sostenible y altamente rentable."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "¿Busca renovar el inventario de su laboratorio? Revise nuestro <a href='productos.html'>catálogo de productos</a>, equipe su laboratorio con tecnología de vanguardia en Ecuador."
+      }
+    ]
+  },
+{
+  "id": 14,
+  "slug": "reactivos, analisis, fisico, quimico, alta, precision, Scharlau, Fisher",
+  "titulo": "Guía Esencial: Reactivos Clave para Análisis Físico-Químicos de Alta Precisión",
+  "resumen": "El control de calidad y la investigación en los laboratorios modernos exigen estándares rigurosos. La fiabilidad de cualquier ensayo analítico depende no solo de la metodología, sino también de la calidad, pureza y trazabilidad de los reactivos químicos utilizados.",
+  "fecha": "2026-10-19",
+  "categoria": "Reactivos",
+  "imagen": "img/blog/articulo14.jpeg",
+  "lectura": "5 min",
+  "metaDescripcion": "Preparación de soluciones para análisis físico-químico.",
+  "keywords": "reactivos, analisis, fisico, quimico, alta, precision, Scharlau, Fisher, Guayaquil, Labsupply, Ecuador",
+    "contenido": [
+      {
+        "tipo": "titulo",
+        "texto": "Reactivos Fundamentales en el Laboratorio Analítico"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Para llevar a cabo titulaciones, preparaciones de muestras, extracciones y determinaciones volumétricas, existen compuestos químicos imprescindibles que actúan como pilares del laboratorio : "
+      },
+
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Ácido Clorhídrico (HCl) : </strong>Fundamental para ajustes de pH, digestiones ácidas y preparaciones de soluciones valoradas.",
+          "<strong>Ácido Sulfúrico (H2SO4) : </strong>Ampliamente utilizado en análisis mineralógicos, determinaciones de demanda química de oxígeno (DQO) y como agente deshidratante.",
+          "<strong>Ácido Nítrico (HNO3) : </strong>Esencial en digestiones de metales pesados por su potente carácter oxidante y preparación de muestras para espectroscopía (ICP/AAS).",
+          "<strong>Metanol y Etanol (CH3OH / C2H5OH) : </strong>Alcoholes de alta pureza empleados como disolventes en cromatografía, extracciones y síntesis orgánica."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "La Importancia de Elegir Marcas de Confianza: Scharlau y Fisher Scientific"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Garantizar la reproducibilidad de los resultados analíticos requiere trabajar con casas fabricantes que ofrezcan certificados de análisis detallados y control de lotes estricto : "
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Scharlau : </strong>Reconocida por su excelente desempeño en reactivos analíticos, disolventes y ácidos de alta pureza, ofreciendo especificaciones claras para laboratorios de control de calidad e investigación.",
+          "<strong>Fisher Scientific : </strong>Un referente global que suministra reactivos de grado analítico, HPLC y ACS, asegurando los más altos estándares internacionales de pureza y mínimos niveles de impurezas metálicas."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Buenas Prácticas en el Manejo y Almacenamiento."
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Seguridad y EPP : </strong>Utilizar siempre gabinetes de extracción de gases, guantes de nitrilo o neopreno, gafas de seguridad y bata de laboratorio al manipular ácidos concentrados.",
+          "<strong>Almacenamiento Segregado : </strong>Mantener los ácidos inorgánicos (como clorhídrico y sulfúrico) separados de bases y compuestos orgánicos inflamables (como metanol y etanol) en armarios certificados con ventilación adecuada.",
+          "<strong>Trazabilidad : </strong>Registrar las fechas de apertura de los envases y verificar los límites de impurezas en los certificados de lote correspondientes."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Especificaciones Técnicas: Ácidos y Solventes de Grado Analítico"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Esta sección presenta las fichas de especificaciones técnicas para catálogos de suministros de laboratorio, estructuradas con estándares de calidad para marcas líderes como Scharlau y Fisher Scientific."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "1. Ácidos Inorgánicos de Alta Pureza"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Ácido Clorhídrico 37% (HCl)"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Grado: Analítico (ACS, ISO, Reag. Ph. Eur.)",
+          "Masa Molar: 36.46 g/mol",
+          "Concentración / Ensayo: 36.5 – 38.0%",
+          "Aspecto: Líquido transparente e incoloro",
+          "Densidad (20°C): aprox 1.19 g/cm3",
+          "Residuo de Calcinación: <= 0.0005%",
+          "Metales Pesados (como Pb): <= 0.00005%",
+          "Aplicaciones: Preparación de soluciones valoradas, digestión de muestras, titulación volumétrica.",
+          "Presentaciones: Envases de vidrio / HDPE de 1 L, 2.5 L y 5 L."
+          
+        ]
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Ácido Sulfúrico 95-97% (H2SO4)"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Grado: Analítico (ACS, ISO) / Grado Traza para Metales",
+          "Masa Molar: 98.08 g/mol",
+          "Concentración / Ensayo: 95.0 – 98.0%",
+          "Aspecto: Líquido viscoso, incoloro e inoloro",
+          "Densidad (20°C): aprox 1.84 g/cm3",
+          "Nitratos (NO3): <= 0.00002%",
+          "Metales Pesados (como Pb): <= 0.00001%",
+          "Aplicaciones: Análises de nitrógeno (Kjeldahl), ensayos de DQO, deshidratación y síntesis analítica.",
+          "Presentaciones: Envases de vidrio recubierto de seguridad de 1 L y 2.5 L."
+          
+        ]
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Ácido Nítrico 65-69% (HNO3)"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Grado: ACS / ISO / ICP-MS Grade",
+          "Masa Molar: 63.01 g/mol",
+          "Concentración / Ensayo: 65.0 – 69.0%",
+          "Aspecto: Líquido fúngico transparente",
+          "Densidad (20°C): aprox 1.41 g/cm3",
+          "Hierro (Fe): <= 0.00002%",
+          "Cloruros (Cl): <= 0.00005%",
+          "Aplicaciones: Digestión de metales para análisis por espectroscopía (AAS, ICP-OES, ICP-MS).",
+          "Presentaciones: Botellas de vidrio inactínico de 1 L y 2.5 L."
+          
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "2. Solventes Orgánicos de Grado Analítico y Cromatográfico"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Metanol (CH3OH)"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Grado: HPLC / UHPLC Grade / ACS",
+          "Masa Molar: 32.04 g/mol",
+          "Pureza (GC): >= 99.9%",
+          "Absorbancia UV (205nm): <= 1.00 AU",
+          "Absorbancia UV (260nm): <= 0.005 AU",
+          "Contenido de Agua (Karl Fischer): <= 0.02%",
+          "Residuo de Evaporación: <= 0.0003%",
+          "Aplicaciones: Fase móvil en HPLC/UHPLC, espectrofotometría UV-Vis, extracciones orgánicas.",
+          "Presentaciones: Botellas de vidrio ámbar de 1 L, 2.5 L y latas metálicas de 4 L."
+        ]
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Etanol Absoluto (C2H5OH)"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Grado: Anhidro / ACS / Reag. Ph. Eur.",
+          "Masa Molar: 46.07 g/mol",
+          "Pureza (GC): >= 99.8%",
+          "Densidad (20°C): $0.789 - 0.791 g/cm3",
+          "Contenido de Agua (Karl Fischer): <= 0.1%",
+          "Acidez Libre: <= 0.0002 meq/g",
+          "Aplicaciones: Preparación de reactivos, síntesis orgánica, limpieza de instrumental óptico y extracción analítica.",
+          "Presentaciones: Botellas de vidrio / HDPE de 1 L, 2.5 L y tambores de 25 L."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Conclusiones Generales del Análisis y Gestión de Reactivos"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El análisis físico-químico de precisión exige una integración rigurosa entre calidad técnica, seguridad operativa y cumplimiento normativo. A partir del estudio de los ácidos y solventes fundamentales, se destacan las siguientes conclusiones clave : "
+      },
+      {
+        "tipo": "titulo",
+        "texto": "1. Incidencia de la Pureza en la Exactitud Analítica"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "La selección de grados de pureza específicos (ACS, HPLC, ICP-MS) de casas reconocidas como Scharlau y Fisher Scientific garantiza la minimización de interferencias por trazas metálicas o contaminantes orgánicos.",
+          "En técnicas instrumentales avanzadas (como HPLC o espectroscopía de absorción atómica), la consistencia de lote a lote es determinante para la repetibilidad y reproducibilidad de los resultados."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "2. Gestión Integral del Riesgo Bajo Normativa GHS"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "La clasificación mediante el Sistema Globalmente Armonizado (GHS) permite identificar de forma estandarizada los peligros intrínsecos (corrosividad, inflamabilidad, toxicidad aguda y propiedades comburentes).",
+          "La correcta interpretación de las frases H (Peligro) y frases P (Prudencia) es la base para el diseño de protocolos de emergencia, el uso adecuado de Equipos de Protección Personal (EPP) y la elaboración de etiquetas de trabajo en laboratorio."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "3. Matriz de Incompatibilidad y Almacenamiento Seguro"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "Segregación obligatoria: Los ácidos oxidantes como el ácido nítrico (HNO3) no deben almacenarse junto a solventes orgánicos inflamables (CH3OH, C2H5OH) debido al elevado riesgo de reacciones exotérmicas violenta o incendios.",
+          "Infraestructura especializada: El equipamiento de almacenamiento debe adaptarse al tipo de reactivo (armarios para corrosivos con extracción para ácidos e infraestructuras antideflagrantes/RF para solventes inflamables)."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Catálogo Comercial de Reactivos Químicos e Insumos de Laboratorio"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Introducción General"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "En el dinámico entorno científico e industrial actual, la precisión analítica y la confiabilidad de los resultados constituyen la columna vertebral de la investigación, el desarrollo y el control de calidad. Cada ensayo, titulación y determinación instrumental requiere un nivel absoluto de certeza, donde la calidad de los insumos utilizados determina directamente el éxito de los procesos."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Este catálogo comercial ha sido diseñado para ofrecer una solución integral a laboratorios analíticos, centros de investigación, academias e industrias (farmacéutica, alimentaria, ambiental y petroquímica). Presentamos una selección rigurosa de reactivos químicos, ácidos inorgánicos y solventes de alta pureza respaldados por marcas de prestigio internacional como Scharlau y Fisher Scientific."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Nuestro compromiso abarca tres pilares fundamentales:"
+      },
+      {
+        "tipo": "lista",
+        "items": [
+          "<strong>Excelencia Química : </strong>Garantía de trazabilidad, certificados de análisis lote a lote y cumplimiento con estándares internacionales (ACS, ISO, Reag. Ph. Eur., HPLC, ICP-MS).",
+          "<strong>Seguridad y Sostenibilidad : </strong>Estricta alineación con el Sistema Globalmente Armonizado (GHS), facilitando la gestión de riesgos y el manejo seguro de sustancias químicas.",
+          "<strong>Eficiencia en el Suministro : </strong>Asesoría técnica especializada, empaques optimizados para máxima seguridad en transporte y disponibilidad constante para asegurar la continuidad operativa de su laboratorio."
+        ]
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Conclusión"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La excelencia en el análisis físico-químico no depende únicamente de la sofisticación de los equipos o de los métodos estandarizados, sino que fundamenta su éxito en la calidad intrínseca y el manejo riguroso de sus reactivos."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La pureza garantizada, el cumplimiento normativo y el manejo seguro constituyen la tríada esencial para transformar los ensayos de laboratorio en datos confiables, sustentables y con verdadero valor científico e industrial."
       },
       {
         "tipo": "parrafo",
