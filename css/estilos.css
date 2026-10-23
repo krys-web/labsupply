@@ -5126,3 +5126,147 @@ li strong {
     height: 100%;
     border: none;
 }
+/* =========================
+   SECCION CLIENTES (CARRUSEL)
+========================= */
+
+.clientes {
+    padding: 40px 0 50px;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f6f9 100%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.clientes h2 {
+    color: #0a2a66;
+    margin-bottom: 20px;
+}
+
+.carrusel-clientes {
+    --cliente-ancho: 160px;
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.clientes-viewport {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+/* TARJETA */
+.cliente-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--cliente-ancho);
+    height: calc(var(--cliente-ancho) * 1.05);
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e3e9f3;
+    box-shadow: 0 6px 18px rgba(10, 42, 102, 0.12);
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.35s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.cliente-card:hover {
+    box-shadow: 0 10px 26px rgba(10, 42, 102, 0.25);
+}
+
+/* PARTE SUPERIOR: LOGO */
+.cliente-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12%;
+    background: #ffffff;
+}
+
+.cliente-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.85;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.cliente-card:hover .cliente-logo img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* PARTE INFERIOR: NOMBRE */
+.cliente-nombre {
+    height: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    background: #0a2a66;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: clamp(10px, calc(var(--cliente-ancho) * 0.085), 15px);
+    line-height: 1.25;
+    text-align: center;
+    border-top: 3px solid #007bff;
+}
+
+/* FLECHAS */
+.clientes-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 300;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #0a2a66;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(10, 42, 102, 0.3);
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.clientes-flecha:hover {
+    background: #007bff;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.clientes-flecha:focus-visible {
+    outline: 3px solid #4fc3f7;
+    outline-offset: 2px;
+}
+
+.clientes-flecha.prev { left: 8px; }
+.clientes-flecha.next { right: 8px; }
+
+@media (max-width: 768px) {
+    .clientes {
+        padding: 30px 0 40px;
+    }
+
+    .carrusel-clientes {
+        padding: 0 44px;
+    }
+
+    .clientes-flecha {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .clientes-flecha.prev { left: 4px; }
+    .clientes-flecha.next { right: 4px; }
+}
