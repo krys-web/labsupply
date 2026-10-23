@@ -18,8 +18,9 @@
     if (!total) return;
 
     // ---- CONFIGURACIÓN ----
-    const ESCALA_CENTRO = 0.7;    // tamaño de la tarjeta en el centro
-    const ESCALA_EXTREMO = 1.15;  // tamaño de la tarjeta en los extremos
+    let ESCALA_CENTRO = 0.7;      // tamaño de la tarjeta en el centro
+    let ESCALA_EXTREMO = 1.15;    // tamaño de la tarjeta en los extremos
+    let PROPORCION_ALTO = 1.05;   // alto de la tarjeta respecto a su ancho
     const VELOCIDAD = 0.32;       // tarjetas por segundo (movimiento continuo)
     const SEPARACION = 0.12;      // espacio entre tarjetas (proporción del ancho)
 
@@ -60,9 +61,25 @@
     function medir() {
         ancho = viewport.clientWidth;
 
-        if (ancho < 560) mitadVisible = 1;
-        else if (ancho < 900) mitadVisible = 2;
-        else mitadVisible = 3;
+        if (ancho < 560) {
+            // Celular: 3 tarjetas, menos diferencia de tamaño y más alto
+            mitadVisible = 1;
+            ESCALA_CENTRO = 0.82;
+            ESCALA_EXTREMO = 1.08;
+            PROPORCION_ALTO = 1.3;
+        } else if (ancho < 900) {
+            // Tablet
+            mitadVisible = 2;
+            ESCALA_CENTRO = 0.75;
+            ESCALA_EXTREMO = 1.12;
+            PROPORCION_ALTO = 1.15;
+        } else {
+            // Escritorio
+            mitadVisible = 3;
+            ESCALA_CENTRO = 0.7;
+            ESCALA_EXTREMO = 1.15;
+            PROPORCION_ALTO = 1.05;
+        }
 
         // La última tarjeta visible llega justo al borde
         const integral = mitadVisible * (ESCALA_CENTRO + ESCALA_EXTREMO) / 2;
@@ -70,7 +87,27 @@
         anchoTarjeta = paso * (1 - SEPARACION);
 
         carrusel.style.setProperty("--cliente-ancho", anchoTarjeta + "px");
-        viewport.style.height = (anchoTarjeta * 1.05 * ESCALA_EXTREMO + 30) + "px";
+        carrusel.style.setProperty("--cliente-alto", (anchoTarjeta * PROPORCION_ALTO) + "px");
+        viewport.style.height = (anchoTarjeta * PROPORCION_ALTO * ESCALA_EXTREMO + 30) + "px";
+
+        ajustarTextos();
+    }
+
+    // Reduce el tamaño de letra de cada nombre hasta que quepa completo
+    // dentro de su franja (máximo 3 líneas), sin cortar el texto.
+    function ajustarTextos() {
+        const nombres = carrusel.querySelectorAll(".cliente-nombre");
+        nombres.forEach((el) => {
+            el.style.fontSize = "";
+            let tam = parseFloat(getComputedStyle(el).fontSize);
+            const minimo = 7;
+            while (tam > minimo &&
+                   (el.scrollHeight > el.clientHeight + 1 ||
+                    el.scrollWidth > el.clientWidth + 1)) {
+                tam -= 0.5;
+                el.style.fontSize = tam + "px";
+            }
+        });
     }
 
     function dibujar() {
@@ -154,7 +191,16 @@
         if (e.key === "ArrowLeft") btnPrev.click();
     });
 
-    window.addEventListener("resize", () => { medir(); dibujar(); });
+    let esperaResize;
+    window.addEventListener("resize", () => {
+        clearTimeout(esperaResize);
+        esperaResize = setTimeout(() => { medir(); dibujar(); }, 120);
+    });
+
+    // Recalcular cuando terminen de cargar las fuentes
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(ajustarTextos);
+    }
 
     medir();
     dibujar();
