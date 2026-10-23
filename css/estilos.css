@@ -5144,6 +5144,7 @@ li strong {
 
 .carrusel-clientes {
     --cliente-ancho: 160px;
+    --cliente-alto: 168px;
     position: relative;
     max-width: 1300px;
     margin: 0 auto;
@@ -5164,7 +5165,7 @@ li strong {
     top: 50%;
     left: 50%;
     width: var(--cliente-ancho);
-    height: calc(var(--cliente-ancho) * 1.05);
+    height: var(--cliente-alto);
     display: flex;
     flex-direction: column;
     background: #ffffff;
@@ -5187,7 +5188,8 @@ li strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12%;
+    min-height: 0;
+    padding: 10% 12%;
     background: #ffffff;
 }
 
@@ -5195,30 +5197,34 @@ li strong {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.85;
-    transition: filter 0.3s ease, opacity 0.3s ease;
+    /* Logos siempre con sus colores originales */
+    filter: none;
+    opacity: 1;
+    transition: transform 0.3s ease;
 }
 
 .cliente-card:hover .cliente-logo img {
-    filter: grayscale(0%);
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* PARTE INFERIOR: NOMBRE */
 .cliente-nombre {
-    height: 32%;
+    flex: 0 0 34%;
+    min-height: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 8%;
+    padding: 4px 7%;
     background: #0a2a66;
     color: #ffffff;
     font-weight: 600;
-    font-size: clamp(10px, calc(var(--cliente-ancho) * 0.085), 15px);
-    line-height: 1.25;
+    /* Tamaño inicial; js/clientes.js lo reduce si el nombre no cabe */
+    font-size: clamp(9px, calc(var(--cliente-ancho) * 0.085), 15px);
+    line-height: 1.2;
     text-align: center;
     border-top: 3px solid #007bff;
+    overflow: hidden;
+    overflow-wrap: break-word;
 }
 
 /* FLECHAS */
@@ -5258,7 +5264,18 @@ li strong {
     }
 
     .carrusel-clientes {
-        padding: 0 44px;
+        padding: 0 40px;
+    }
+
+    .cliente-card {
+        border-radius: 10px;
+    }
+
+    .cliente-nombre {
+        flex-basis: 44%;
+        padding: 3px 6%;
+        font-size: clamp(9px, calc(var(--cliente-ancho) * 0.1), 13px);
+        line-height: 1.15;
     }
 
     .clientes-flecha {
@@ -5267,6 +5284,23 @@ li strong {
         font-size: 14px;
     }
 
-    .clientes-flecha.prev { left: 4px; }
-    .clientes-flecha.next { right: 4px; }
+    .clientes-flecha.prev { left: 2px; }
+    .clientes-flecha.next { right: 2px; }
+}
+
+@media (max-width: 480px) {
+    .clientes h2 {
+        font-size: 1.3rem;
+        padding: 0 16px;
+    }
+
+    .carrusel-clientes {
+        padding: 0 34px;
+    }
+
+    .clientes-flecha {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
 }
